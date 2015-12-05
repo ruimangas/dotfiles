@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/ruijosepereira/Desktop/weekly-programming/week-4-bonus/mangas'
+let g:netrw_dirhist_2='/Users/ruijosepereira/Desktop/weekly-programming'
+let g:netrw_dirhist_3='/Users/ruijosepereira/Desktop/weekly-programming/week-4-bonus'
+let g:netrw_dirhist_4='/Users/ruijosepereira/Desktop/weekly-programming/week-4-bonus/mangas'
