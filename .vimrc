@@ -58,12 +58,9 @@ nnoremap <leader>vr :source ~/.vimrc<CR>
 autocmd BufRead,BufNewFile *.tex setlocal spell
 
 map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
+map <leader>tm :tabnext<cr>
 
 let g:ctrlp_working_path_mode = '0'
 
-" vim-rspec mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>a :call RunAllSpecs()<CR>

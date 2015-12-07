@@ -10,7 +10,7 @@ alias hi='history'
 
 alias code='~/Code'
 alias drop='~/Dropbox'
-alias desktop='~/Desktop'
+alias dk='~/Desktop'
 alias tese='~/Desktop/Thesis/projecto-tese'
 alias tdoc='open ~/Desktop/Thesis/projecto-tese/document.pdf'
 alias wp='~/Desktop/weekly-programming'
