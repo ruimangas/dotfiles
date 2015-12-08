@@ -8,10 +8,13 @@ Bundle 'gmarik/Vundle.vim'
 
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'thoughtbot/vim-rspec'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-dispatch'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-fugitive'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 
 call vundle#end()
@@ -64,3 +67,10 @@ map <leader>tm :tabnext<cr>
 let g:ctrlp_working_path_mode = '0'
 
 map <Leader>a :call RunAllSpecs()<CR>
+
+nnoremap <space>gss  :Gstatus<CR>
+nnoremap <space>gd   :Gdiff<CR>
+nnoremap <space>gad  :Git add %:p<CR><CR>
+nnoremap <space>gcm  :Gcommit<CR>
+nnoremap <space>gp   :Dispatch! git push<CR>
+nnoremap <space>gpl  :Dispatch! git pull<CR>
