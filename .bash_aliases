@@ -4,6 +4,7 @@ alias gp='git push'
 alias gpl='git pull'
 alias gcm='git commit -m'
 alias gd='git diff'
+alias gc='git clone'
 
 alias hs='history | grep'
 alias hi='history'
@@ -16,3 +17,6 @@ alias tdoc='open ~/Desktop/Thesis/projecto-tese/document.pdf'
 alias wp='~/Desktop/weekly-programming'
 alias h='cd ~'
 alias dot='~/dotfiles'
+
+alias tback='sh ~/Desktop/Thesis/projecto-tese/backup.sh'
+

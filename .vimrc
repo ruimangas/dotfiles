@@ -13,6 +13,7 @@ Bundle 'tpope/vim-dispatch'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
@@ -27,6 +28,7 @@ set number
 set ruler
 set tabstop=2
 set shiftwidth=2
+set relativenumber
 set expandtab
 set incsearch
 set ignorecase
@@ -66,11 +68,7 @@ map <leader>tm :tabnext<cr>
 
 let g:ctrlp_working_path_mode = '0'
 
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-
-nnoremap <space>gss  :Gstatus<CR>
-nnoremap <space>gd   :Gdiff<CR>
-nnoremap <space>gad  :Git add %:p<CR><CR>
-nnoremap <space>gcm  :Gcommit<CR>
-nnoremap <space>gp   :Dispatch! git push<CR>
-nnoremap <space>gpl  :Dispatch! git pull<CR>
