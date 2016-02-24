@@ -62,6 +62,8 @@ nnoremap <leader>vr :source ~/.vimrc<CR>
 :setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell
 
+:nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
+
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabnext<cr>
@@ -72,3 +74,5 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab

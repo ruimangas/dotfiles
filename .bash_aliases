@@ -11,6 +11,7 @@ alias hi='history'
 
 alias code='~/Code'
 alias drop='~/Dropbox'
+alias dw='/Users/ruijosepereira/Downloads/done'
 alias dk='~/Desktop'
 alias tese='~/Desktop/Thesis/projecto-tese'
 alias tdoc='open ~/Desktop/Thesis/projecto-tese/document.pdf'

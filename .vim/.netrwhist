@@ -1,6 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/ruijosepereira/Documents/IST/2semestre/SDIS/projecto/parte1/PARTE1_FINAL/chequerefeicao-ws-cli'
-let g:netrw_dirhist_2='/Users/ruijosepereira/Documents/IST/2semestre/SDIS/projecto/parte1/PARTE1_FINAL/chequerefeicao-ws-cli/src'
-let g:netrw_dirhist_3='/Users/ruijosepereira/Documents/IST/2semestre/SDIS/projecto/parte1/PARTE1_FINAL/chequerefeicao-ws-cli/src/example'
-let g:netrw_dirhist_4='/Users/ruijosepereira/Documents/IST/2semestre/SDIS/projecto/parte1/PARTE1_FINAL/chequerefeicao-ws-cli/src/example/cli'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/ruijosepereira/Code/instagram-clone'
+let g:netrw_dirhist_2='/Users/ruijosepereira/Code/instagram-clone/spec'
+let g:netrw_dirhist_3='/Users/ruijosepereira/Code/instagram-clone'
