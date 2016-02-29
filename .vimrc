@@ -9,12 +9,10 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-dispatch'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 
@@ -48,6 +46,11 @@ colorscheme solarized
 
 imap jk <ESC>
 
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
 :nnoremap <leader>w  :w<cr>
 :nnoremap <leader>q  :wq<cr>
 :nnoremap <leader>fq :q!<cr>
@@ -63,6 +66,7 @@ nnoremap <leader>vr :source ~/.vimrc<CR>
 autocmd BufRead,BufNewFile *.tex setlocal spell
 
 :nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
+:nnoremap <Leader>sal :grep -R<space> .<Left><Left>
 
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
