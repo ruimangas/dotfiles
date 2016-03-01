@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/ruijosepereira/Desktop/dev-registry-domain/server'
+let g:netrw_dirhist_2='/Users/ruijosepereira/Desktop/dev-registry-domain'
+let g:netrw_dirhist_3='/Users/ruijosepereira/Desktop/dev-registry-domain/server/src/test/java/domainregistry'
+let g:netrw_dirhist_4='/Users/ruijosepereira/Desktop/dev-registry-domain/server'
+let g:netrw_dirhist_5='/Users/ruijosepereira/Desktop/dev-registry-domain/server/src/main'
+let g:netrw_dirhist_6='/Users/ruijosepereira/Desktop/dev-registry-domain/server/src/main/java'
+let g:netrw_dirhist_7='/Users/ruijosepereira/Desktop/dev-registry-domain/server/src/main/java/domainregistry'
+let g:netrw_dirhist_8='/Users/ruijosepereira/Desktop/dev-registry-domain/server'

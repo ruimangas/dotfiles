@@ -66,7 +66,7 @@ nnoremap <leader>vr :source ~/.vimrc<CR>
 autocmd BufRead,BufNewFile *.tex setlocal spell
 
 :nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
-:nnoremap <Leader>sal :grep -R<space> .<Left><Left>
+:nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
 
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
