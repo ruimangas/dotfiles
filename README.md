@@ -1,3 +1,3 @@
 # dotfiles
 
-My vim, zsh and bash aliases config files
+My vim and zsh config files
