@@ -18,6 +18,10 @@ alias tdoc='open ~/Desktop/Thesis/projecto-tese/document.pdf'
 alias wp='~/Desktop/weekly-programming'
 alias h='cd ~'
 alias dot='~/dotfiles'
+alias 'dockeri'='/Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh'
 
 alias tback='sh ~/Desktop/Thesis/projecto-tese/backup.sh'
+
+alias ta="tmux a -t"
+alias tn="tmux new -s"
 

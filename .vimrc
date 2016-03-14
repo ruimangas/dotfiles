@@ -15,6 +15,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
@@ -26,7 +27,6 @@ set number
 set ruler
 set tabstop=2
 set shiftwidth=2
-set relativenumber
 set expandtab
 set incsearch
 set ignorecase
@@ -39,6 +39,8 @@ set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set autoindent
 set wildmenu
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
 
 let mapleader=','
 set background=dark
@@ -80,3 +82,4 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
+
