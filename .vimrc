@@ -15,7 +15,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
@@ -69,6 +68,10 @@ autocmd BufRead,BufNewFile *.tex setlocal spell
 
 :nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 :nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
+
+nnoremap Y y$
+nnoremap ºº $
+nnoremap §  _
 
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
