@@ -9,6 +9,10 @@ alias gc='git clone'
 alias hs='history | grep'
 alias hi='history'
 
+alias r=rm
+alias rr=rm\ -r
+alias rrf=rm\ -rf
+
 alias code='~/Code'
 alias drop='~/Dropbox'
 alias dw='/Users/ruijosepereira/Downloads/done'
@@ -25,3 +29,4 @@ alias tback='sh ~/Desktop/Thesis/projecto-tese/backup.sh'
 alias ta="tmux a -t"
 alias tn="tmux new -s"
 
+alias rtrash='sudo rm -rf ~/.Trash/*'
