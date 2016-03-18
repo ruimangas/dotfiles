@@ -38,8 +38,15 @@ set list
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set autoindent
 set wildmenu
+set showmatch
+set autoread
+set splitright
+set splitbelow
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
+set encoding=utf-8
+set notimeout
+set ttimeout
+set ttimeoutlen=10
 
 let mapleader=','
 set background=dark
@@ -66,12 +73,22 @@ nnoremap <leader>vr :source ~/.vimrc<CR>
 :setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell
 
+
+" Search and replace on current file
 :nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+" Search all files
 :nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
 
 nnoremap Y y$
 nnoremap ºº $
 nnoremap §  _
+
+" Do not show that stupid window
+map q: :q
+
+" Remove all whitespaces
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
@@ -86,3 +103,8 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
+set wildignore+=*.DS_Store                        " OSX bullshit
+set wildignore+=*.pyc                             " Python byte code
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg    " Images
+set wildignore+=.hg,.git,.svn                     " Version control stuff

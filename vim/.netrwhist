@@ -1,10 +1,10 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/ruijosepereira/Desktop/dev-registry-domain/server/src'
-let g:netrw_dirhist_2='/Users/ruijosepereira/Desktop/dev-registry-domain/server'
-let g:netrw_dirhist_3='/Users/ruijosepereira/Desktop'
-let g:netrw_dirhist_4='/Users/ruijosepereira/Desktop/server'
-let g:netrw_dirhist_5='/Users/ruijosepereira/Desktop/dev-registry-domain/server'
-let g:netrw_dirhist_6='/Users/ruijosepereira/Desktop/dev-registry-domain/server/src/main/java/domainregistry/cassandra'
-let g:netrw_dirhist_7='/Users/ruijosepereira/Desktop/dev-registry-domain/server'
+let g:netrw_dirhist_1='/Users/ruijosepereira/.oh-my-zsh/themes'
+let g:netrw_dirhist_2='/Users/ruijosepereira/.oh-my-zsh'
+let g:netrw_dirhist_3='/Users/ruijosepereira/.oh-my-zsh/themes'
+let g:netrw_dirhist_4='/Users/ruijosepereira/Desktop/dev-registry-domain'
+let g:netrw_dirhist_5='/Users/ruijosepereira/.oh-my-zsh/themes'
+let g:netrw_dirhist_6='/Users/ruijosepereira/Downloads/done'
+let g:netrw_dirhist_7='/Users/ruijosepereira/Downloads'
 let g:netrw_dirhist_8='/Users/ruijosepereira'
