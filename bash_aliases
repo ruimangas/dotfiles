@@ -13,6 +13,8 @@ alias r=rm
 alias rr=rm\ -r
 alias rrf=rm\ -rf
 
+alias o='open'
+
 alias code='~/Code'
 alias drop='~/Dropbox'
 alias dw='/Users/ruijosepereira/Downloads/done'

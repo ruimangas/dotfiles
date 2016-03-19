@@ -80,9 +80,12 @@ autocmd BufRead,BufNewFile *.tex setlocal spell
 " Search all files
 :nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
 
+" Edit current split in a new tab
+nnoremap <C-t> :tab split <CR>
+
 nnoremap Y y$
-nnoremap ºº $
-nnoremap §  _
+nnoremap uh $
+nnoremap ui  _
 
 " Do not show that stupid window
 map q: :q
@@ -92,7 +95,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabnext<cr>
+map <leader>as :tabnext<cr>
 
 let g:ctrlp_working_path_mode = '0'
 
