@@ -3,7 +3,8 @@ puts "Ruby script to install the dot files into home directory"
 
 def replace(file)
   puts "removing file ~/.#{file}"
-  cmd = "rm '~/.#{file}'"
+  file_path = File.join(Dir.home, ".#{file}")
+  cmd = "rm #{file_path}"
   system(cmd)
   create_symbolic_link(file)
 end
