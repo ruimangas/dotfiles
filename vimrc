@@ -35,6 +35,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 set list
+set encoding=utf-8
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set autoindent
 set wildmenu
@@ -43,7 +44,6 @@ set autoread
 set splitright
 set splitbelow
 
-set encoding=utf-8
 set notimeout
 set ttimeout
 set ttimeoutlen=10
