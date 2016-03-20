@@ -1,4 +1,4 @@
-export ZSH=/Users/ruijosepereira/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
@@ -6,7 +6,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
-source $HOME/.bash_profile
 
 alias myzsh="vi ~/.zshrc"
 alias myvim="vi ~/.vimrc"
