@@ -9,7 +9,6 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'fatih/vim-go'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
@@ -84,8 +83,8 @@ autocmd BufRead,BufNewFile *.tex setlocal spell
 nnoremap <C-t> :tab split <CR>
 
 nnoremap Y y$
-nnoremap uh $
-nnoremap ui  _
+nnoremap pp $
+nnoremap qq  _
 
 " Do not show that stupid window
 map q: :q
@@ -104,17 +103,6 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-
-" golang configs
-au FileType go nmap <leader>r  <Plug>(go-run)
-au FileType go nmap <Leader>d <Plug>(go-doc)
-
-" vim-go
-let g:go_fmt_fail_silently = 1
-let g:go_autodetect_gopath = 1
-let g:go_highlight_space_tab_error = 0
-let g:go_highlight_array_whitespace_error = 0
-let g:go_highlight_trailing_whitespace_error = 0
 
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype go setlocal ts=4 sw=4 sts=0 expandtab
