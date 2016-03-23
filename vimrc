@@ -9,6 +9,7 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'fatih/vim-go'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
@@ -39,7 +40,6 @@ set encoding=utf-8
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set autoindent
 set wildmenu
-set showmatch
 set autoread
 set splitright
 set splitbelow
@@ -99,15 +99,31 @@ map <leader>as :tabnext<cr>
 
 let g:ctrlp_working_path_mode = '0'
 
+" ruby rspec configs
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" golang configs
+au FileType go nmap <leader>r  <Plug>(go-run)
+au FileType go nmap <Leader>d <Plug>(go-doc)
+
+" vim-go
+let g:go_fmt_fail_silently = 1
+let g:go_autodetect_gopath = 1
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype go setlocal ts=4 sw=4 sts=0 expandtab
+au BufRead,BufNewFile *.go set filetype=go
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
 set wildignore+=*.DS_Store                        " OSX bullshit
 set wildignore+=*.pyc                             " Python byte code
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg    " Images
 set wildignore+=.hg,.git,.svn                     " Version control stuff
+set wildignore+=go/pkg                            " Go static files
+set wildignore+=go/bin                            " Go bin files
