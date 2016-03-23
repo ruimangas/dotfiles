@@ -82,6 +82,10 @@ autocmd BufRead,BufNewFile *.tex setlocal spell
 " Edit current split in a new tab
 nnoremap <C-t> :tab split <CR>
 
+" long lines
+nnoremap j gj
+nnoremap k gk
+
 nnoremap Y y$
 nnoremap pp $
 nnoremap qq  _
