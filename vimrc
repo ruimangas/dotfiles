@@ -72,7 +72,6 @@ nnoremap <leader>vr :source ~/.vimrc<CR>
 :setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell
 
-
 " Search and replace on current file
 :nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 
@@ -89,6 +88,9 @@ nnoremap k gk
 nnoremap Y y$
 nnoremap pp $
 nnoremap qq  _
+
+" format an entire file
+nmap <leader>fef ggVG=
 
 " Do not show that stupid window
 map q: :q
