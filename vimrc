@@ -104,6 +104,11 @@ map <leader>as :tabnext<cr>
 
 let g:ctrlp_working_path_mode = '0'
 
+" go configs
+au FileType go map <leader>r :!gofmt -w %<cr>
+au FileType go map <leader>g :!go run %<cr>
+:autocmd FileType go set nolist
+
 " ruby rspec configs
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
