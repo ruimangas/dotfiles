@@ -8,6 +8,7 @@ Bundle 'gmarik/Vundle.vim'
 
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'fatih/vim-go'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
@@ -86,7 +87,7 @@ nnoremap j gj
 nnoremap k gk
 
 nnoremap Y y$
-nnoremap pp $
+nnoremap 0 $
 nnoremap qq  _
 
 " format an entire file
@@ -105,9 +106,13 @@ map <leader>as :tabnext<cr>
 let g:ctrlp_working_path_mode = '0'
 
 " go configs
-au FileType go map <leader>r :!gofmt -w %<cr>
-au FileType go map <leader>g :!go run %<cr>
+au FileType go nmap <leader>r <Plug>(go-run)
 :autocmd FileType go set nolist
+let g:go_fmt_fail_silently = 1
+let g:go_fmt_command = "goimports"
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 " ruby rspec configs
 map <Leader>t :call RunCurrentSpecFile()<CR>
