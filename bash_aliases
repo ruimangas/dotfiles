@@ -5,6 +5,9 @@ alias gpl='git pull'
 alias gcm='git commit -m'
 alias gd='git diff'
 alias gc='git clone'
+alias gb='git branch'
+alias gk='git checkout'
+alias gbnew='git checkout -b'
 
 alias hs='history | grep'
 alias hi='history'
@@ -34,3 +37,5 @@ alias tn="tmux new -s"
 alias tl="tmux ls"
 
 alias rtrash='sudo rm -rf ~/.Trash/*'
+
+alias urar='unrar e'
