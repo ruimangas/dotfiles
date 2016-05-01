@@ -72,6 +72,7 @@ nnoremap <leader>vr :source ~/.vimrc<CR>
 
 :setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Search and replace on current file
 :nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>

@@ -18,14 +18,13 @@ alias hs='history | grep'
 alias hi='history'
 
 alias r=rm
-alias rr=rm\ -r
-alias rrf=rm\ -rf
+alias rrf=rm\ -r
 
 alias o='open'
 
 alias code='~/Code'
 alias drop='~/Dropbox'
-alias dw='/Users/ruijosepereira/Downloads/done'
+alias dw='/Users/ruijosepereira/Downloads/done; ls'
 alias dk='~/Desktop'
 alias tese='~/Desktop/Thesis/projecto-tese'
 alias tdoc='open ~/Desktop/Thesis/projecto-tese/document.pdf'
