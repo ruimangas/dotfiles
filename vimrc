@@ -63,7 +63,7 @@ map <right> <nop>
 :nnoremap <leader>q  :wq<cr>
 :nnoremap <leader>fq :q!<cr>
 
-:nnoremap <leader>ma :!make<cr>
+:nnoremap <leader>ma :!sh ~/Desktop/Thesis/dissertation-document/toPdf.sh<cr>
 
 :nnoremap <leader><space> : :nohlsearch<cr>
 

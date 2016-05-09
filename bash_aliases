@@ -17,7 +17,6 @@ alias dss="docker stop"
 alias hs='history | grep'
 alias hi='history'
 
-alias r=rm
 alias rrf=rm\ -r
 
 alias o='open'
