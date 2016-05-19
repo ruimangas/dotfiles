@@ -83,6 +83,8 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 " Edit current split in a new tab
 nnoremap <C-t> :tab split <CR>
 
+map <C-f> :/
+
 " long lines
 nnoremap j gj
 nnoremap k gk
