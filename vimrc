@@ -14,6 +14,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-vinegar'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 
@@ -29,7 +30,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set incsearch
-set ignorecase
+set smartcase
 set hlsearch
 set visualbell
 set nobackup
@@ -63,7 +64,7 @@ map <right> <nop>
 :nnoremap <leader>q  :wq<cr>
 :nnoremap <leader>fq :q!<cr>
 
-:nnoremap <leader>ma :!sh ~/Desktop/Thesis/dissertation-document/toPdf.sh<cr>
+:nnoremap <leader>ma :w<cr>:!sh ~/Desktop/Thesis/dissertation-document/toPdf.sh<cr>
 
 :nnoremap <leader><space> : :nohlsearch<cr>
 
@@ -83,7 +84,9 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 " Edit current split in a new tab
 nnoremap <C-t> :tab split <CR>
 
-map <C-f> :/
+nnoremap <C-f> /
+nnoremap <C-h> B
+nnoremap <C-l> W
 
 " long lines
 nnoremap j gj

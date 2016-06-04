@@ -15,3 +15,4 @@ alias alia="vi ~/.bash_aliases"
 alias vis="source ~/.vimrc"
 alias zshs="source ~/.zshrc"
 alias bas="source ~/.bash_aliases"
+
