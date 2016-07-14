@@ -8,6 +8,7 @@ alias gc='git clone'
 alias gb='git branch'
 alias gk='git checkout'
 alias gbnew='git checkout -b'
+alias svv='vagrant ssh'
 
 alias dpp="docker ps"
 alias dll="docker logs"

@@ -66,7 +66,7 @@ map <right> <nop>
 
 :nnoremap <leader>ma :w<cr>:!sh ~/Desktop/Thesis/dissertation-document/toPdf.sh<cr>
 
-:nnoremap <leader><space> : :nohlsearch<cr>
+:nnoremap <leader><leader> : :nohlsearch<cr>
 
 nnoremap <leader>ve :vsp $MYVIMRC<CR>
 nnoremap <leader>vr :source ~/.vimrc<CR>
