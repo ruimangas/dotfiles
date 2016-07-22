@@ -31,6 +31,7 @@ set shiftwidth=2
 set expandtab
 set incsearch
 set smartcase
+set ignorecase
 set hlsearch
 set visualbell
 set nobackup
@@ -108,6 +109,10 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
 map <leader>as :tabnext<cr>
+
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 let g:ctrlp_working_path_mode = '0'
 
