@@ -7,6 +7,7 @@ call vundle#begin()
 Bundle 'gmarik/Vundle.vim'
 
 Bundle 'kien/ctrlp.vim'
+Bundle 'junegunn/goyo.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
