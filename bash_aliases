@@ -44,5 +44,5 @@ alias tl="tmux ls"
 
 alias rtrash='sudo rm -rf ~/.Trash/*'
 
-alias urar='unrar e'
+alias rru='ls *.rar | xargs unrar e'
 alias urr='sh /Users/ruijosepereira/Code/bash-scripts/tv-shows.sh'
