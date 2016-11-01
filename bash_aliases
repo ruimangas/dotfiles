@@ -20,7 +20,7 @@ alias hi='history'
 
 alias please='sudo $(fc -ln -1)'
 
-alias rrf=rm\ -r
+alias rr=rm\ -r
 
 alias o='open'
 alias cll='clear'
@@ -28,8 +28,8 @@ alias cll='clear'
 alias code='~/Code'
 alias drop='~/Dropbox'
 alias dw='/Users/ruijosepereira/Downloads/done; ls'
-alias dk='~/Desktop'
-alias tese='$HOME/Desktop/Thesis/dissertation-document; ls'
+alias dk='~/Desktop; ls'
+alias tese='$HOME/Desktop/Thesis/dissertation-presentation; ls'
 alias tdoc='open $HOME/Desktop/Thesis/dissertation-document/thesis.pdf'
 alias tcode='cd ~/Desktop/Thesis/code/utils'
 alias wp='~/Desktop/weekly-programming'
@@ -45,4 +45,3 @@ alias tl="tmux ls"
 alias rtrash='sudo rm -rf ~/.Trash/*'
 
 alias rru='ls *.rar | xargs unrar e'
-alias urr='sh /Users/ruijosepereira/Code/bash-scripts/tv-shows.sh'

@@ -62,6 +62,9 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" disable backspace (force use of c-h, c-u and c-w)
+:inoremap <bs> <nop>
+
 :nnoremap <leader>w  :w<cr>
 :nnoremap <leader>q  :wq<cr>
 :nnoremap <leader>fq :q!<cr>

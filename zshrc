@@ -16,3 +16,6 @@ alias vis="source ~/.vimrc"
 alias zshs="source ~/.zshrc"
 alias bas="source ~/.bash_aliases"
 
+
+export NVM_DIR="/Users/ruijosepereira/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
