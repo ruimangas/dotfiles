@@ -62,29 +62,26 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-" disable backspace (force use of c-h, c-u and c-w)
-:inoremap <bs> <nop>
+nnoremap <leader>w  :w<cr>
+nnoremap <leader>q  :wq<cr>
+nnoremap <leader>fq :q!<cr>
 
-:nnoremap <leader>w  :w<cr>
-:nnoremap <leader>q  :wq<cr>
-:nnoremap <leader>fq :q!<cr>
+nnoremap <leader>ma :w<cr>:!sh ~/Desktop/Thesis/dissertation-document/toPdf.sh<cr>
 
-:nnoremap <leader>ma :w<cr>:!sh ~/Desktop/Thesis/dissertation-document/toPdf.sh<cr>
-
-:nnoremap <leader><leader> : :nohlsearch<cr>
+nnoremap <leader><leader> : :nohlsearch<cr>
 
 nnoremap <leader>ve :vsp $MYVIMRC<CR>
 nnoremap <leader>vr :source ~/.vimrc<CR>
 
-:setlocal spell spelllang=en_us
+setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Search and replace on current file
-:nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
+nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " Search all files
-:nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
+nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
 
 " Edit current split in a new tab
 nnoremap <C-t> :tab split <CR>
@@ -102,7 +99,7 @@ nnoremap ºº $
 nnoremap qq  _
 
 " format an entire file
-nmap <leader>fef ggVG=
+nnoremap <leader>fef ggVG=
 
 " Do not show that stupid window
 map q: :q
@@ -121,7 +118,7 @@ endif
 let g:ctrlp_working_path_mode = '0'
 
 " go configs
-:autocmd FileType go set nolist
+autocmd FileType go set nolist
 
 " ruby rspec configs
 map <Leader>t :call RunCurrentSpecFile()<CR>
