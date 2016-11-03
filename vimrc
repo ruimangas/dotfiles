@@ -66,6 +66,9 @@ nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
 nnoremap <leader>fq :q!<cr>
 
+nmap <leader>tp :set paste<CR>
+nmap <leader>utp :set nopaste<CR>
+
 " insert pry breakpoint
 map ,p <CR>orequire 'pry-byebug'; binding.pry<CR><ESC>
 
@@ -111,9 +114,10 @@ map q: :q
 " Remove all whitespaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-map <leader>tn :tabnew<cr>
-map <leader>tc :tabclose<cr>
 map <leader>as :tabnext<cr>
+
+" Open current split as a new tab
+map <leader>qw <C-W>T<cr>
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -161,7 +165,6 @@ endfunction
 nmap <leader>mer :call MergeTabs()<CR>
 
 " Rename current file (thanks Gary Bernhardt)
-
 function! RenameFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'), 'file')
