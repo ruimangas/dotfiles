@@ -66,6 +66,9 @@ nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
 nnoremap <leader>fq :q!<cr>
 
+"insert breakpoint
+map ,p <CR>orequire 'pry-byebug'; binding.pry<CR><ESC>
+
 nnoremap <leader>ma :w<cr>:!sh ~/Desktop/Thesis/dissertation-document/toPdf.sh<cr>
 
 nnoremap <leader><leader> : :nohlsearch<cr>
