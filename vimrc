@@ -141,3 +141,35 @@ set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg    " Images
 set wildignore+=.hg,.git,.svn                     " Version control stuff
 set wildignore+=go/pkg                            " Go static files
 set wildignore+=go/bin                            " Go bin files
+
+" Merge a tab into a split in the previous window (thanks Ben Orenstein)
+function! MergeTabs()
+  if tabpagenr() == 1
+    return
+  endif
+  let bufferName = bufname("%")
+  if tabpagenr("$") == tabpagenr()
+    close!
+  else
+    close!
+    tabprev
+  endif
+  split
+  execute "buffer " . bufferName
+endfunction
+
+nmap <leader>mer :call MergeTabs()<CR>
+
+" Rename current file (thanks Gary Bernhardt)
+
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+
+map <Leader>ren :call RenameFile()<cr>
