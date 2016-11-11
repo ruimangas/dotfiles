@@ -13,6 +13,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-vinegar'
 Bundle 'thoughtbot/vim-rspec'
@@ -63,22 +64,21 @@ map <left> <nop>
 map <right> <nop>
 
 nnoremap <leader>w  :w<cr>
-nnoremap <leader>q  :wq<cr>
+nnoremap <leader>qq  :wq<cr>
 nnoremap <leader>fq :q!<cr>
 
 nmap <leader>tp :set paste<CR>
 nmap <leader>utp :set nopaste<CR>
 
 " insert pry breakpoint
-map ,p <CR>orequire 'pry-byebug'; binding.pry<CR><ESC>
-
-" compile thesis
-nnoremap <leader>ma :w<cr>:!sh ~/Desktop/Thesis/dissertation-document/toPdf.sh<cr>
+map ,p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
 
 nnoremap <leader><leader> : :nohlsearch<cr>
 
 nnoremap <leader>ve :vsp $MYVIMRC<CR>
 nnoremap <leader>vr :source ~/.vimrc<CR>
+
+nnoremap <leader>z :!rspec<CR>
 
 setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell
@@ -127,12 +127,6 @@ let g:ctrlp_working_path_mode = '0'
 
 " go configs
 autocmd FileType go set nolist
-
-" ruby rspec configs
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype go setlocal ts=4 sw=4 sts=0 expandtab

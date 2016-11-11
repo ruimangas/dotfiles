@@ -22,19 +22,21 @@ alias please='sudo $(fc -ln -1)'
 
 alias rr=rm\ -r
 
+alias gi='gem install'
+
 alias o='open'
 alias cll='clear'
 
 alias code='~/Code'
 alias drop='~/Dropbox'
-alias dw='/Users/ruijosepereira/Downloads/done; ls'
+alias dw='/Users/ruimangas/Downloads/done; ls'
 alias dk='~/Desktop; ls'
 alias tese='$HOME/Desktop/Thesis/dissertation-presentation; ls'
 alias tdoc='open $HOME/Desktop/Thesis/dissertation-document/thesis.pdf'
 alias tcode='cd ~/Desktop/Thesis/code/utils'
 alias wp='~/Desktop/weekly-programming'
 alias dot='~/dotfiles'
-alias mymusic='cd /Users/ruijosepereira/Music/iTunes/iTunes\ Media/Music'
+alias mymusic='cd /Users/ruimangas/Music/iTunes/iTunes\ Media/Music'
 
 alias tback='sh ~/Desktop/Thesis/projecto-tese/backup.sh'
 
