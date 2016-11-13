@@ -8,6 +8,7 @@ alias gc='git clone'
 alias gb='git branch'
 alias gk='git checkout'
 alias gbnew='git checkout -b'
+
 alias svv='vagrant ssh'
 
 alias dpp="docker ps"
@@ -16,7 +17,6 @@ alias drr="docker rm"
 alias dss="docker stop"
 
 alias bw="brew"
-alias cl="clear"
 
 alias hs='history | grep'
 alias hi='history'
@@ -28,7 +28,8 @@ alias rr=rm\ -r
 alias gi='gem install'
 
 alias o='open'
-alias cll='clear'
+alias h='cd ~'
+alias cl='clear'
 
 alias code='~/Code'
 alias drop='~/Dropbox'
@@ -40,8 +41,6 @@ alias tcode='cd ~/Desktop/Thesis/code/utils'
 alias wp='~/Desktop/weekly-programming'
 alias dot='~/dotfiles'
 alias mymusic='cd /Users/ruimangas/Music/iTunes/iTunes\ Media/Music'
-
-alias tback='sh ~/Desktop/Thesis/projecto-tese/backup.sh'
 
 alias ta="tmux a -t"
 alias tn="tmux new -s"

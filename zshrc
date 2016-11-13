@@ -6,6 +6,7 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
+source $HOME/dotfiles/functions
 
 alias myzsh="vi ~/.zshrc"
 alias myvim="vi ~/.vimrc"
