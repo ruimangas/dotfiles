@@ -9,6 +9,7 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'janko-m/vim-test'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
@@ -78,7 +79,11 @@ nnoremap <leader><leader> : :nohlsearch<cr>
 nnoremap <leader>ve :vsp $MYVIMRC<CR>
 nnoremap <leader>vr :source ~/.vimrc<CR>
 
-nnoremap <leader>z :!rspec<CR>
+" Running tests
+nnoremap <silent> <leader>t :TestFile<CR>
+nnoremap <silent> <leader>a :TestSuite<CR>
+nnoremap <silent> <leader>l :TestLast<CR>
+nnoremap <silent> <leader>g :TestVisit<CR>
 
 setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell

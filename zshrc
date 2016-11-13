@@ -16,4 +16,6 @@ alias vis="source ~/.vimrc"
 alias zshs="source ~/.zshrc"
 alias bas="source ~/.bash_aliases"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
