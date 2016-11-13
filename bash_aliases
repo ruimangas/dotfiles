@@ -15,6 +15,9 @@ alias dll="docker logs"
 alias drr="docker rm"
 alias dss="docker stop"
 
+alias bw="brew"
+alias cl="clear"
+
 alias hs='history | grep'
 alias hi='history'
 

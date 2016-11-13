@@ -54,7 +54,7 @@ set ttimeoutlen=10
 
 let mapleader=','
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
 imap jk <ESC>
 
