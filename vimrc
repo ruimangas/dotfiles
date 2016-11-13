@@ -80,10 +80,10 @@ nnoremap <leader>ve :vsp $MYVIMRC<CR>
 nnoremap <leader>vr :source ~/.vimrc<CR>
 
 " Running tests
-nnoremap <silent> <leader>t :TestFile<CR>
-nnoremap <silent> <leader>a :TestSuite<CR>
-nnoremap <silent> <leader>l :TestLast<CR>
-nnoremap <silent> <leader>g :TestVisit<CR>
+nnoremap <silent> <leader>tt :TestFile<CR>
+nnoremap <silent> <leader>aa :TestSuite<CR>
+nnoremap <silent> <leader>ll :TestLast<CR>
+nnoremap <silent> <leader>gg :TestVisit<CR>
 
 setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell
