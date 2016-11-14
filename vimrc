@@ -65,11 +65,8 @@ map <left> <nop>
 map <right> <nop>
 
 nnoremap <leader>w  :w<cr>
-nnoremap <leader>qq  :wq<cr>
+nnoremap <leader>q  :wq<cr>
 nnoremap <leader>fq :q!<cr>
-
-nmap <leader>tp :set paste<CR>
-nmap <leader>utp :set nopaste<CR>
 
 " insert pry breakpoint
 map ,p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
@@ -80,10 +77,10 @@ nnoremap <leader>ve :vsp $MYVIMRC<CR>
 nnoremap <leader>vr :source ~/.vimrc<CR>
 
 " Running tests
-nnoremap <silent> <leader>tt :TestFile<CR>
-nnoremap <silent> <leader>aa :TestSuite<CR>
-nnoremap <silent> <leader>ll :TestLast<CR>
-nnoremap <silent> <leader>gg :TestVisit<CR>
+nnoremap <silent> <leader>t :TestFile<CR>
+nnoremap <silent> <leader>a :TestSuite<CR>
+nnoremap <silent> <leader>l :TestLast<CR>
+nnoremap <silent> <leader>g :TestVisit<CR>
 
 setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.tex setlocal spell
@@ -119,10 +116,10 @@ map q: :q
 " Remove all whitespaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-map <leader>as :tabnext<cr>
+map <leader>zx :tabnext<cr>
 
 " Open current split as a new tab
-map <leader>qw <C-W>T<cr>
+map <leader>we <C-W>T<cr>
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
