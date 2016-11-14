@@ -92,9 +92,6 @@ nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 " Search all files
 nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
 
-" Edit current split in a new tab
-nnoremap <C-t> :tab split <CR>
-
 nnoremap <C-f> /
 nnoremap <C-h> B
 nnoremap <C-l> W
@@ -116,7 +113,7 @@ map q: :q
 " Remove all whitespaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-map <leader>zx :tabnext<cr>
+map <leader>dw :tabnext<cr>
 
 " Open current split as a new tab
 map <leader>we <C-W>T<cr>
@@ -158,7 +155,7 @@ function! MergeTabs()
   execute "buffer " . bufferName
 endfunction
 
-nmap <leader>mer :call MergeTabs()<CR>
+nmap <leader>mm :call MergeTabs()<CR>
 
 " Rename current file (thanks Gary Bernhardt)
 function! RenameFile()
