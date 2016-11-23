@@ -26,7 +26,6 @@ filetype plugin indent on
 syntax on
 
 set showmode
-set number
 set relativenumber
 set ruler
 set tabstop=2
@@ -116,7 +115,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 map <leader>dw :tabnext<cr>
 
 " Open current split as a new tab
-map <leader>we <C-W>T<cr>
+map <leader>er <C-W>T<cr>
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
