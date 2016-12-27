@@ -10,6 +10,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
@@ -41,7 +42,7 @@ set nowritebackup
 set noswapfile
 set list
 set encoding=utf-8
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+set listchars=tab:›\.,trail:.,extends:#,nbsp:.
 set autoindent
 set wildmenu
 set autoread
@@ -88,6 +89,15 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 " Search and replace on current file
 nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+" Open schema.rb (rails)
+nnoremap <Leader>sc :sp db/schema.rb<cr>
+
+" List rails app controllers
+nnoremap <leader>co :vsp app/controllers<cr>
+
+" Open rails routes.rb
+nnoremap <leader>ro :vsp config/routes.rb<cr>
+
 " Search all files
 nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
 
@@ -108,6 +118,7 @@ nnoremap <leader>fef ggVG=
 
 " Do not show that stupid window
 map q: :q
+map ? *
 
 " Remove all whitespaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
