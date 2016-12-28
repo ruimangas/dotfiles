@@ -15,7 +15,7 @@ def create_symbolic_link(file)
   system(cmd)
 end
 
-%w{pryrc tmux.conf vimrc bash_aliases zshrc rspec}.each do |file|
+%w{pryrc tmux.conf vimrc bash_aliases zshrc rspec gitconfig}.each do |file|
   replace_all_files = false
 
   if File.exists?(File.join(Dir.home, ".#{file}"))

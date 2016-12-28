@@ -1,0 +1,17 @@
+[user]
+  name = Rui Mangas Pereira
+  email = ruijosemangas@gmail.com
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
+[color "diff"]
+  meta = yellow
+
+[push]
+  default = current
+
+[github]
+  user = ruimangas
