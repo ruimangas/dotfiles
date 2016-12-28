@@ -99,7 +99,10 @@ nnoremap <leader>co :vsp app/controllers<cr>
 nnoremap <leader>ro :vsp config/routes.rb<cr>
 
 " Search all files
-nnoremap <Leader>sal :grep -R <C-r><C-w> .<CR>
+nnoremap <Leader>fina :!git grep<space>
+
+" Search current file
+nnoremap <Leader>fin :!git grep   %<left><left><left>
 
 nnoremap <C-f> /
 nnoremap <C-h> B
