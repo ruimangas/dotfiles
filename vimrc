@@ -89,10 +89,10 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
 
 " Search and replace on current file
-nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
+nnoremap <leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " Open schema.rb (rails)
-nnoremap <Leader>sc :sp db/schema.rb<cr>
+nnoremap <leader>sc :sp db/schema.rb<cr>
 
 " List rails app controllers
 nnoremap <leader>co :vsp app/controllers<cr>
@@ -104,10 +104,10 @@ nnoremap <leader>ro :vsp config/routes.rb<cr>
 nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
-nnoremap <Leader>faf :!git grep<space>
+nnoremap <leader>faf :!git grep<space>
 
 " Search current file
-nnoremap <Leader>fcf :!git grep   %<left><left><left>
+nnoremap <leader>fcf :!git grep   %<left><left><left>
 
 " Open file on current dir
 cnoremap <expr> %% expand('%:h').'/'
@@ -119,10 +119,13 @@ nnoremap <leader>fef ggVG=
 " Remove all whitespaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-map <leader>dw :tabnext<cr>
+map <leader>nt :tabnext<cr>
 
 " Open current split as a new tab
-map <leader>er <C-W>T<cr>
+map <leader>sp <C-W>T<cr>
+
+" Sometimes I forgot my leader commands
+map <leader>lea :!grep --color leader ~/dotfiles/vimrc <cr>
 
 nnoremap <C-f> /
 nnoremap <C-h> B
@@ -190,7 +193,7 @@ function! RenameFile()
   endif
 endfunction
 
-map <Leader>ren :call RenameFile()<cr>
+map <leader>ren :call RenameFile()<cr>
 
 " Open changed files (thanks Gary Bernhardt)
 function! OpenChangedFiles()
@@ -203,4 +206,4 @@ function! OpenChangedFiles()
   endfor
 endfunction
 
-command! OpenChangedFiles :call OpenChangedFiles()
+nmap <leader>cf :call OpenChangedFiles()
