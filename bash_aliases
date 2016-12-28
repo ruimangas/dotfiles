@@ -30,7 +30,7 @@ alias rr=rm\ -r
 alias gi='gem install'
 
 alias o='open'
-alias h='cd ~'
+alias cs='cd ~'
 alias cl='clear'
 
 alias code='~/Code'
