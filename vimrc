@@ -1,4 +1,5 @@
 set nocompatible
+
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -64,17 +65,16 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-nnoremap <leader>w  :w<cr>
-nnoremap <leader>q  :wq<cr>
-nnoremap <leader>fq :q!<cr>
-
 " insert pry breakpoint
 map ,p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
 
-nnoremap <leader><leader> : :nohlsearch<cr>
+setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
 
-nnoremap <leader>ve :vsp $MYVIMRC<CR>
-nnoremap <leader>vr :source ~/.vimrc<CR>
+nnoremap <leader>w  :w<cr>
+nnoremap <leader>q  :wq<cr>
+nnoremap <leader>fq :q!<cr>
 
 " Running tests
 nnoremap <silent> <leader>t :TestFile<CR>
@@ -82,9 +82,11 @@ nnoremap <silent> <leader>a :TestSuite<CR>
 nnoremap <silent> <leader>l :TestLast<CR>
 nnoremap <silent> <leader>g :TestVisit<CR>
 
-setlocal spell spelllang=en_us
-autocmd BufRead,BufNewFile *.tex setlocal spell
-autocmd BufRead,BufNewFile *.md setlocal spell
+nnoremap <leader><leader> : :nohlsearch<cr>
+
+" Edit and source vim config
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>sv :source ~/.vimrc<CR>
 
 " Search and replace on current file
 nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
@@ -107,6 +109,21 @@ nnoremap <Leader>faf :!git grep<space>
 " Search current file
 nnoremap <Leader>fcf :!git grep   %<left><left><left>
 
+" Open file on current dir
+cnoremap <expr> %% expand('%:h').'/'
+map <leader>ed :vsp %%
+
+" format an entire file
+nnoremap <leader>fef ggVG=
+
+" Remove all whitespaces
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+map <leader>dw :tabnext<cr>
+
+" Open current split as a new tab
+map <leader>er <C-W>T<cr>
+
 nnoremap <C-f> /
 nnoremap <C-h> B
 nnoremap <C-l> W
@@ -119,20 +136,9 @@ nnoremap Y y$
 nnoremap ºº $
 nnoremap qq  _
 
-" format an entire file
-nnoremap <leader>fef ggVG=
-
 " Do not show that stupid window
 map q: :q
 map ? *
-
-" Remove all whitespaces
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-map <leader>dw :tabnext<cr>
-
-" Open current split as a new tab
-map <leader>er <C-W>T<cr>
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
