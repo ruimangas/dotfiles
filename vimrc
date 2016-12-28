@@ -98,6 +98,9 @@ nnoremap <leader>co :vsp app/controllers<cr>
 " Open rails routes.rb
 nnoremap <leader>ro :vsp config/routes.rb<cr>
 
+" Open rails models
+nnoremap <leader>mo :vsp app/models<cr>
+
 " Search all files
 nnoremap <Leader>faf :!git grep<space>
 
