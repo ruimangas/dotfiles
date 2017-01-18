@@ -33,6 +33,9 @@ alias o='open'
 alias cs='cd ~'
 alias cl='clear'
 
+alias notes='cd /Users/ruimangas/Dropbox/NOTES && vim .'
+alias note='cd /Users/ruimangas/Dropbox/NOTES && vim '
+
 alias code='~/Code'
 alias drop='~/Dropbox'
 alias dw='/Users/ruimangas/Downloads/done; ls'
