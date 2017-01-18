@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="miloshadzic"
+ZSH_THEME="lambda"
 
 plugins=(git)
 
@@ -9,7 +9,7 @@ source $HOME/.bash_aliases
 source $HOME/dotfiles/functions
 
 alias myzsh="vi ~/.zshrc"
-alias myvim="vi ~/.vimrc"
+alias myvim="vi ~/dotfiles/vimrc"
 alias alia="vi ~/.bash_aliases"
 
 alias vis="source ~/.vimrc"

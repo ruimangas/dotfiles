@@ -1,4 +1,5 @@
 set nocompatible
+
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -64,17 +65,16 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-nnoremap <leader>w  :w<cr>
-nnoremap <leader>q  :wq<cr>
-nnoremap <leader>fq :q!<cr>
-
 " insert pry breakpoint
 map ,p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
 
-nnoremap <leader><leader> : :nohlsearch<cr>
+setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
 
-nnoremap <leader>ve :vsp $MYVIMRC<CR>
-nnoremap <leader>vr :source ~/.vimrc<CR>
+nnoremap <leader>w  :w<cr>
+nnoremap <leader>q  :wq<cr>
+nnoremap <leader>fq :q!<cr>
 
 " Running tests
 nnoremap <silent> <leader>t :TestFile<CR>
@@ -82,15 +82,17 @@ nnoremap <silent> <leader>a :TestSuite<CR>
 nnoremap <silent> <leader>l :TestLast<CR>
 nnoremap <silent> <leader>g :TestVisit<CR>
 
-setlocal spell spelllang=en_us
-autocmd BufRead,BufNewFile *.tex setlocal spell
-autocmd BufRead,BufNewFile *.md setlocal spell
+nnoremap <leader><leader> : :nohlsearch<cr>
+
+" Edit and source vim config
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>sv :source ~/.vimrc<CR>
 
 " Search and replace on current file
-nnoremap <Leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
+nnoremap <leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " Open schema.rb (rails)
-nnoremap <Leader>sc :sp db/schema.rb<cr>
+nnoremap <leader>sc :sp db/schema.rb<cr>
 
 " List rails app controllers
 nnoremap <leader>co :vsp app/controllers<cr>
@@ -102,10 +104,28 @@ nnoremap <leader>ro :vsp config/routes.rb<cr>
 nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
-nnoremap <Leader>faf :!git grep<space>
+nnoremap <leader>faf :!git grep<space>
 
 " Search current file
-nnoremap <Leader>fcf :!git grep   %<left><left><left>
+nnoremap <leader>fcf :!git grep   %<left><left><left>
+
+" Open file on current dir
+cnoremap <expr> %% expand('%:h').'/'
+map <leader>ed :vsp %%
+
+" format an entire file
+nnoremap <leader>fef ggVG=
+
+" Remove all whitespaces
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+map <leader>nt :tabnext<cr>
+
+" Open current split as a new tab
+map <leader>sp <C-W>T<cr>
+
+" Sometimes I forgot my leader commands
+map <leader>lea :!grep --color leader ~/dotfiles/vimrc <cr>
 
 nnoremap <C-f> /
 nnoremap <C-h> B
@@ -119,20 +139,9 @@ nnoremap Y y$
 nnoremap ºº $
 nnoremap qq  _
 
-" format an entire file
-nnoremap <leader>fef ggVG=
-
 " Do not show that stupid window
 map q: :q
 map ? *
-
-" Remove all whitespaces
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-map <leader>dw :tabnext<cr>
-
-" Open current split as a new tab
-map <leader>er <C-W>T<cr>
 
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -184,4 +193,17 @@ function! RenameFile()
   endif
 endfunction
 
-map <Leader>ren :call RenameFile()<cr>
+map <leader>ren :call RenameFile()<cr>
+
+" Open changed files (thanks Gary Bernhardt)
+function! OpenChangedFiles()
+  only " Close all windows, unless they're modified
+  let status = system('git status -s | grep "^ \?\(M\|A\|UU\)" | sed "s/^.\{3\}//"')
+  let filenames = split(status, "\n")
+  exec "edit " . filenames[0]
+  for filename in filenames[1:]
+    exec "vsp " . filename
+  endfor
+endfunction
+
+nmap <leader>cf :call OpenChangedFiles()
