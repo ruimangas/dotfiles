@@ -19,6 +19,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-vinegar'
+Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 
@@ -82,7 +83,7 @@ nnoremap <silent> <leader>a :TestSuite<CR>
 nnoremap <silent> <leader>l :TestLast<CR>
 nnoremap <silent> <leader>g :TestVisit<CR>
 
-nnoremap <leader><leader> : :nohlsearch<cr>
+nnoremap <leader><space> : :nohlsearch<cr>
 
 " Edit and source vim config
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
@@ -207,3 +208,8 @@ function! OpenChangedFiles()
 endfunction
 
 nmap <leader>cf :call OpenChangedFiles()
+
+"git fugitive
+
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>

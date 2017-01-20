@@ -15,7 +15,7 @@ alias svv='vagrant ssh'
 
 alias dpp="docker ps"
 alias dll="docker logs"
-alias drr="docker rm"
+alias drr="docker rm -f"
 alias dss="docker stop"
 
 alias bw="brew"
@@ -45,8 +45,9 @@ alias dot='~/dotfiles'
 alias mymusic='cd /Users/ruimangas/Music/iTunes/iTunes\ Media/Music'
 
 alias ta="tmux a -t"
-alias tn="tmux new -s"
+alias tn="tmux"
 alias tl="tmux ls"
+alias tk="tmux kill-session -t"
 
 alias rtrash='sudo rm -rf ~/.Trash/*'
 
