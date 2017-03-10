@@ -70,7 +70,10 @@ map <right> <nop>
 map ,p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
 
 setlocal spell spelllang=en_us
+hi SpellBad cterm=underline ctermfg=yellow
+
 autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 nnoremap <leader>w  :w<cr>
@@ -210,7 +213,6 @@ function! OpenChangedFiles()
     exec "vsp " . filename
   endfor
 endfunction
-
 nmap <leader>cf :call OpenChangedFiles()
 
 "git fugitive
