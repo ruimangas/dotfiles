@@ -120,6 +120,10 @@ nnoremap <leader>fef ggVG=
 " Remove all whitespaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+" Reload file and throw away any changes
+
+nnoremap <leader>rel :edit!<cr>
+
 map <leader>nt :tabnext<cr>
 
 " Open current split as a new tab
