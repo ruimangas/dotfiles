@@ -69,6 +69,10 @@ map <right> <nop>
 " insert pry breakpoint
 map ,p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
 
+" enabling and disabling spelling for current file type
+nnoremap <leader>es :set spell spelllang=en_us<CR>
+nnoremap <leader>ds :set nospell<CR>
+
 setlocal spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=yellow
 
