@@ -115,8 +115,8 @@ nnoremap <leader>mo :vsp app/models<cr>
 " Search all files
 nnoremap <leader>faf :!git grep -n<space>
 
-" Search current file
-nnoremap <leader>fcf :!git grep -n   %<left><left><left>
+" Search current file (used when ag is not available)
+nnoremap <leader>fcf :!git grep -n <C-r><C-w> % <CR>
 
 " Open file on current dir
 cnoremap <expr> %% expand('%:h').'/'
