@@ -9,6 +9,7 @@ Bundle 'gmarik/Vundle.vim'
 
 Bundle 'kien/ctrlp.vim'
 Bundle 'junegunn/goyo.vim'
+Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
 Bundle 'kchmck/vim-coffee-script'
@@ -155,10 +156,6 @@ nnoremap qq  _
 map q: :q
 map ? *
 
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
-
 let g:ctrlp_working_path_mode = '0'
 
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
@@ -220,3 +217,12 @@ nmap <leader>cf :call OpenChangedFiles()
 
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
+
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
+
+" search under the cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
