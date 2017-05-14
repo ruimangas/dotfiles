@@ -19,3 +19,9 @@ alias bas="source ~/.bash_aliases"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ruimangas/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ruimangas/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ruimangas/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ruimangas/google-cloud-sdk/completion.zsh.inc'; fi

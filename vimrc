@@ -19,6 +19,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
@@ -42,6 +43,7 @@ set hlsearch
 set visualbell
 set nobackup
 set nowritebackup
+set backspace=indent,eol,start
 set noswapfile
 set list
 set encoding=utf-8
@@ -60,6 +62,8 @@ let mapleader=','
 set background=dark
 colorscheme gruvbox
 
+let test#strategy = "dispatch"
+
 imap jk <ESC>
 
 map <up> <nop>
@@ -68,7 +72,10 @@ map <left> <nop>
 map <right> <nop>
 
 " insert pry breakpoint
-map ,p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
+map <leader>p <CR>ibinding.pry<CR><ESC>
+
+" remove all breakpoints
+map <leader>rp :g/binding/d<CR><ESC>
 
 " enabling and disabling spelling for current file type
 nnoremap <leader>es :set spell spelllang=en_us<CR>
@@ -89,7 +96,6 @@ nnoremap <leader>fq :q!<cr>
 nnoremap <silent> <leader>t :TestFile<CR>
 nnoremap <silent> <leader>a :TestSuite<CR>
 nnoremap <silent> <leader>l :TestLast<CR>
-nnoremap <silent> <leader>g :TestVisit<CR>
 
 nnoremap <leader><space> : :nohlsearch<cr>
 
@@ -113,7 +119,7 @@ nnoremap <leader>ro :vsp config/routes.rb<cr>
 nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
-nnoremap <leader>faf :!git grep -n<space>
+nnoremap <leader>faf :Dispatch git grep -n<space>
 
 " Search current file (used when ag is not available)
 nnoremap <leader>fcf :!git grep -n <C-r><C-w> % <CR>
@@ -129,7 +135,6 @@ nnoremap <leader>fef ggVG=
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Reload file and throw away any changes
-
 nnoremap <leader>rel :edit!<cr>
 
 map <leader>nt :tabnext<cr>
@@ -213,10 +218,10 @@ function! OpenChangedFiles()
 endfunction
 nmap <leader>cf :call OpenChangedFiles()
 
-"git fugitive
-
+"git commands
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gb :Gblame<CR>
 
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
