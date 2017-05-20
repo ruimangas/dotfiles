@@ -19,7 +19,6 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
@@ -62,8 +61,6 @@ let mapleader=','
 set background=dark
 colorscheme gruvbox
 
-let test#strategy = "dispatch"
-
 imap jk <ESC>
 
 map <up> <nop>
@@ -96,6 +93,7 @@ nnoremap <leader>fq :q!<cr>
 nnoremap <silent> <leader>t :TestFile<CR>
 nnoremap <silent> <leader>a :TestSuite<CR>
 nnoremap <silent> <leader>l :TestLast<CR>
+nnoremap <silent> <leader>v :TestVisit<CR>
 
 nnoremap <leader><space> : :nohlsearch<cr>
 
@@ -120,9 +118,6 @@ nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
 nnoremap <leader>faf :Dispatch git grep -n<space>
-
-" Search current file (used when ag is not available)
-nnoremap <leader>fcf :!git grep -n <C-r><C-w> % <CR>
 
 " Open file on current dir
 cnoremap <expr> %% expand('%:h').'/'
@@ -228,6 +223,3 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
-
-" search under the cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
