@@ -19,6 +19,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'thoughtbot/vim-rspec'
@@ -221,5 +222,4 @@ nnoremap <leader>gb :Gblame<CR>
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
 endif
