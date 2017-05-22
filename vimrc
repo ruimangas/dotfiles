@@ -118,7 +118,7 @@ nnoremap <leader>ro :vsp config/routes.rb<cr>
 nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
-nnoremap <leader>faf :Dispatch git grep -n<space>
+nnoremap <leader>faf :!git grep -n<space>
 
 " Open file on current dir
 cnoremap <expr> %% expand('%:h').'/'
