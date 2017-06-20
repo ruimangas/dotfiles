@@ -23,6 +23,8 @@ alias bw="brew"
 alias hs='history | grep'
 alias hi='history'
 
+alias pi='cd ~/pipelines'
+
 alias please='sudo $(fc -ln -1)'
 
 alias rr=rm\ -r

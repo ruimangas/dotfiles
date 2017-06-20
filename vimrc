@@ -157,6 +157,7 @@ let g:ctrlp_working_path_mode = '0'
 
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype go setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype py setlocal ts=4 sw=4 sts=0 expandtab
 au BufRead,BufNewFile *.go set filetype=go
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
