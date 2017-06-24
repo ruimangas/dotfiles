@@ -2,7 +2,7 @@
 
 My vim and zsh config files
 
-##Installation
+## Installation
 
 1. `git clone https://github.com/ruijose/dotfiles`
 2. `cd dotfiles`
