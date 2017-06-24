@@ -1,4 +1,4 @@
-set nocompatible
+
 
 filetype off
 
@@ -114,7 +114,10 @@ nnoremap <leader>ro :vsp config/routes.rb<cr>
 nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
-nnoremap <leader>faf :!git grep -n<space>
+nnoremap <leader>faf :!ag<space>
+
+" Open project explorer
+nnoremap <leader>k :Vexplore<CR>
 
 " Open file on current dir
 cnoremap <expr> %% expand('%:h').'/'
@@ -219,4 +222,5 @@ nnoremap <leader>gb :Gblame<CR>
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
 endif
