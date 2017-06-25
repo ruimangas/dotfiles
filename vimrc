@@ -112,7 +112,12 @@ nnoremap <leader>ro :vsp config/routes.rb<cr>
 nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
-nnoremap <leader>faf :!ag<space>
+" by default it searches only on ruby files
+nnoremap <leader>faf :!ag --ruby<space>
+
+" Search all files word under the cursor
+" by default it searches only on ruby files
+nnoremap <leader>fw :!ag --ruby <C-r><C-w>
 
 " Open project explorer
 nnoremap <leader>k :Vexplore<CR>
@@ -210,7 +215,7 @@ function! OpenChangedFiles()
     exec "vsp " . filename
   endfor
 endfunction
-nmap <leader>cf :call OpenChangedFiles()
+nmap <leader>cf :call OpenChangedFiles()<CR>
 
 "git commands
 nnoremap <leader>gs :Gstatus<CR>
