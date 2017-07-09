@@ -9,6 +9,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'Vimjas/vim-python-pep8-indent'
 Bundle 'janko-m/vim-test'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'altercation/vim-colors-solarized'
@@ -120,7 +121,7 @@ nnoremap <leader>faf :!ag --ruby<space>
 nnoremap <leader>fw :!ag --ruby <C-r><C-w>
 
 " Open project explorer
-nnoremap <leader>k :Vexplore<CR>
+nnoremap <leader>ç :Vexplore<CR>
 
 " Open file on current dir
 cnoremap <expr> %% expand('%:h').'/'
