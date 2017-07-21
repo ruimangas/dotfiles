@@ -88,6 +88,7 @@ nnoremap <leader>fq :q!<cr>
 " Running tests
 nnoremap <silent> <leader>T :TestNearest<CR>
 nnoremap <silent> <leader>t :TestFile<CR>
+nnoremap <silent> <leader>v :TestVisit<CR>
 
 nnoremap <leader><space> : :nohlsearch<cr>
 
