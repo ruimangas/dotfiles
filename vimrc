@@ -87,9 +87,6 @@ nnoremap <leader>fq :q!<cr>
 
 " Running tests
 nnoremap <silent> <leader>t :TestFile<CR>
-nnoremap <silent> <leader>a :TestSuite<CR>
-nnoremap <silent> <leader>l :TestLast<CR>
-nnoremap <silent> <leader>v :TestVisit<CR>
 
 nnoremap <leader><space> : :nohlsearch<cr>
 
