@@ -20,6 +20,8 @@ alias bas="source ~/.bash_aliases"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+export PATH=~/bin:$PATH
+
 export AIRFLOW_HOME=~/airflow
 
 # The next line updates PATH for the Google Cloud SDK.
