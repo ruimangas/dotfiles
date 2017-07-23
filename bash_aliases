@@ -25,9 +25,9 @@ alias hs='history | grep'
 alias hi='history'
 
 # current projs
-alias pi='cd ~/pipelines'
-alias ol='cd ~/Desktop/open_layer'
-alias pr='cd ~/Desktop/python_bigquery_runner'
+alias pi='cd ~/pipelines; ls'
+alias ol='cd ~/Desktop/open_layer; ls'
+alias pr='cd ~/Desktop/python_bigquery_runner; ls'
 
 # tmux
 alias ta="tmux a -t"
@@ -37,5 +37,3 @@ alias tk="tmux kill-session -t"
 
 alias dk='~/Desktop; ls'
 alias dot='~/dotfiles'
-
-
