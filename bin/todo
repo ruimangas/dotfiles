@@ -1,4 +1,3 @@
 # Creates something for me to do.
 
 touch ~/Desktop/"$*"
-

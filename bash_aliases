@@ -1,3 +1,4 @@
+# git
 alias gss='git status'
 alias gad='git add .'
 alias gp='git push'
@@ -11,43 +12,30 @@ alias gb='git branch'
 alias gk='git checkout'
 alias gbnew='git checkout -b'
 
+# vagrant
 alias svv='vagrant ssh'
 
+#docker
 alias dpp="docker ps"
 alias dll="docker logs"
 alias drr="docker rm -f"
 alias dss="docker stop"
 
-alias bw="brew"
-
 alias hs='history | grep'
 alias hi='history'
 
+# current projs
 alias pi='cd ~/pipelines'
+alias ol='cd ~/Desktop/open_layer'
+alias pr='cd ~/Desktop/python_bigquery_runner'
 
-alias please='sudo $(fc -ln -1)'
-
-alias rr=rm\ -r
-
-alias gi='gem install'
-
-alias o='open'
-alias cs='cd ~'
-alias cl='clear'
-
-alias notes='cd /Users/ruimangas/Dropbox/NOTES && vim .'
-alias note='cd /Users/ruimangas/Dropbox/NOTES && vim '
-
-alias code='~/Code'
-alias drop='~/Dropbox'
-alias dk='~/Desktop; ls'
-alias dot='~/dotfiles'
-
+# tmux
 alias ta="tmux a -t"
 alias tn="tmux"
 alias tl="tmux ls"
 alias tk="tmux kill-session -t"
 
-alias rtrash='sudo rm -rf ~/.Trash/*'
+alias dk='~/Desktop; ls'
+alias dot='~/dotfiles'
 
-alias rru='ls *.rar | xargs unrar e'
+
