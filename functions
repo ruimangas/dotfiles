@@ -1,9 +1,0 @@
-function take {
-  mkdir $1
-  cd $1
-}
-
-function notesfi {
-  cd ~/Dropbox/notes
-  grep -rnIi "$1" .
-}
