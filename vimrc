@@ -103,6 +103,9 @@ nnoremap <leader>faf :!ag --ruby<space>
 " by default it searches only on ruby files
 nnoremap <leader>fw :!ag --ruby <C-r><C-w>
 
+" Search for 'def foo'
+nnoremap <silent> ,fd :!ag 'def <cword>'<CR>
+
 " Open project explorer
 nnoremap <leader>ç :Vexplore<CR>
 
