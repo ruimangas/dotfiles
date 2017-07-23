@@ -6,23 +6,13 @@ call vundle#begin()
 Bundle 'gmarik/Vundle.vim'
 
 Bundle 'kien/ctrlp.vim'
-Bundle 'junegunn/goyo.vim'
-Bundle 'majutsushi/tagbar'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'Vimjas/vim-python-pep8-indent'
 Bundle 'janko-m/vim-test'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'vim-ruby/vim-ruby'
 
 call vundle#end()
 filetype plugin indent on
@@ -52,7 +42,6 @@ set wildmenu
 set autoread
 set splitright
 set splitbelow
-
 set notimeout
 set ttimeout
 set ttimeoutlen=10
@@ -90,6 +79,7 @@ nnoremap <silent> <leader>T :TestNearest<CR>
 nnoremap <silent> <leader>t :TestFile<CR>
 nnoremap <silent> <leader>v :TestVisit<CR>
 
+" Clear search highlights
 nnoremap <leader><space> : :nohlsearch<cr>
 
 " Edit and source vim config
@@ -99,16 +89,10 @@ nnoremap <leader>sv :source ~/.vimrc<CR>
 " Search and replace on current file
 nnoremap <leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 
-" Open schema.rb (rails)
+" Rails helpers
 nnoremap <leader>sc :sp db/schema.rb<cr>
-
-" List rails app controllers
 nnoremap <leader>co :vsp app/controllers<cr>
-
-" Open rails routes.rb
 nnoremap <leader>ro :vsp config/routes.rb<cr>
-
-" Open rails models
 nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
@@ -129,7 +113,7 @@ map <leader>ed :vsp %%
 " format an entire file
 nnoremap <leader>fef ggVG=
 
-" Remove all whitespaces
+" Remove all whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Reload file and throw away any changes
@@ -147,13 +131,13 @@ nnoremap <C-f> /
 nnoremap <C-h> B
 nnoremap <C-l> W
 
-" long lines
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
 nnoremap Y y$
 nnoremap ºº $
 nnoremap qq  _
+
+" long lines
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Do not show that stupid window
 map q: :q
