@@ -11,6 +11,7 @@ alias gc='git clone'
 alias gb='git branch'
 alias gk='git checkout'
 alias gbnew='git checkout -b'
+alias gst='git stash'
 
 # vagrant
 alias svv='vagrant ssh'
