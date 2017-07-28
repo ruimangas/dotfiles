@@ -60,8 +60,14 @@ map <right> <nop>
 " insert pry breakpoint
 map <leader>p <CR>ibinding.pry<CR><ESC>
 
-" remove all breakpoints
+" remove all pry breakpoints
 map <leader>rp :g/binding/d<CR><ESC>
+
+" insert py breakpoint
+map <leader>º <CR>iimport pdb; pdb.set_trace()<CR><ESC>
+
+" remove all py breakpoints
+map <leader>rº :g/set_trace/d<CR><ESC>
 
 setlocal spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=yellow
@@ -107,7 +113,7 @@ nnoremap <leader>fw :!ag --ruby <C-r><C-w>
 nnoremap <silent> ,fd :!ag 'def <cword>'<CR>
 
 " Open project explorer
-nnoremap <leader>ç :Vexplore<CR>
+nnoremap <leader>ef :Vexplore<CR>
 
 " Open file on current dir
 cnoremap <expr> %% expand('%:h').'/'

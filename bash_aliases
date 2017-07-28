@@ -29,6 +29,7 @@ alias hi='history'
 alias pi='cd ~/pipelines; ls'
 alias ol='cd ~/Desktop/open_layer; ls'
 alias pr='cd ~/Desktop/python_bigquery_runner; ls'
+alias sd='cd ~/Desktop/scrappy-doo; ls'
 
 # tmux
 alias ta="tmux a -t"
