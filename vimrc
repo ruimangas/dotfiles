@@ -153,6 +153,7 @@ map ? *
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = '0'
 
+autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype go setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype py setlocal ts=4 sw=4 sts=0 expandtab
@@ -214,6 +215,7 @@ nmap <leader>cf :call OpenChangedFiles()<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gc :Gcommit<CR>
 
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor

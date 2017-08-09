@@ -2,6 +2,9 @@
   name = Rui Mangas Pereira
   email = ruijosemangas@gmail.com
 
+[commit]
+  template = ~/.gitmessage
+
 [color]
   diff = auto
   status = auto
