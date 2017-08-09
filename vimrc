@@ -83,6 +83,8 @@ nnoremap <silent> <leader>T :TestNearest<CR>
 nnoremap <silent> <leader>t :TestFile<CR>
 nnoremap <silent> <leader>v :TestVisit<CR>
 
+let test#python#runner = 'pytest'
+
 " Clear search highlights
 nnoremap <leader><space> : :nohlsearch<cr>
 
