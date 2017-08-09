@@ -72,9 +72,7 @@ map <leader>rº :g/set_trace/d<CR><ESC>
 setlocal spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=yellow
 
-autocmd BufRead,BufNewFile *.tex setlocal spell
-autocmd BufRead,BufNewFile *.txt setlocal spell
-autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType markdown setlocal spell
 
 nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
@@ -152,6 +150,7 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 map q: :q
 map ? *
 
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = '0'
 
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
@@ -208,6 +207,7 @@ function! OpenChangedFiles()
     exec "vsp " . filename
   endfor
 endfunction
+
 nmap <leader>cf :call OpenChangedFiles()<CR>
 
 "git commands

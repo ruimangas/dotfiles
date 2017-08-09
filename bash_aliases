@@ -10,6 +10,7 @@ alias gdd='git diff develop'
 alias gc='git clone'
 alias gb='git branch'
 alias gk='git checkout'
+alias gkl='git checkout -'
 alias gbnew='git checkout -b'
 alias gst='git stash'
 
