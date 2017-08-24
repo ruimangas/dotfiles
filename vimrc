@@ -64,10 +64,10 @@ map <leader>p <CR>ibinding.pry<CR><ESC>
 map <leader>rp :g/binding/d<CR><ESC>
 
 " insert py breakpoint
-map <leader>º <CR>iimport pdb; pdb.set_trace()<CR><ESC>
+map <leader>P <CR>iimport pdb; pdb.set_trace()<CR><ESC>
 
 " remove all py breakpoints
-map <leader>rº :g/set_trace/d<CR><ESC>
+map <leader>rP :g/set_trace/d<CR><ESC>
 
 setlocal spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=yellow
