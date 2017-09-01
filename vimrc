@@ -7,6 +7,7 @@ Bundle 'gmarik/Vundle.vim'
 
 Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'nvie/vim-flake8'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-endwise'
