@@ -141,7 +141,7 @@ nnoremap <C-h> B
 nnoremap <C-l> W
 
 nnoremap Y y$
-nnoremap ºº $
+nnoremap \\ $
 nnoremap qq  _
 
 " long lines
@@ -150,7 +150,7 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Do not show that stupid window
 map q: :q
-map ? *
+map + *
 
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = '0'
