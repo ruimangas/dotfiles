@@ -40,3 +40,6 @@ alias tk="tmux kill-session -t"
 
 alias dk='~/Desktop; ls'
 alias dot='~/dotfiles'
+alias drop='~/dropbox; ls'
+
+alias worknotes='vim ~/dropbox/work/notes'
