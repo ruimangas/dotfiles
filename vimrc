@@ -5,11 +5,11 @@ call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
 
-Bundle 'kien/ctrlp.vim'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'nvie/vim-flake8'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
+Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Bundle 'junegunn/fzf.vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vinegar'
@@ -75,6 +75,8 @@ hi SpellBad cterm=underline ctermfg=yellow
 
 autocmd FileType markdown setlocal spell
 
+nnoremap <c-p> :Files<cr>
+
 nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
 nnoremap <leader>fq :q!<cr>
@@ -83,6 +85,7 @@ nnoremap <leader>fq :q!<cr>
 nnoremap <silent> <leader>T :TestNearest<CR>
 nnoremap <silent> <leader>t :TestFile<CR>
 nnoremap <silent> <leader>v :TestVisit<CR>
+nnoremap <silent> <leader>las :TestLast<CR>
 
 let test#python#runner = 'pytest'
 
@@ -129,6 +132,8 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Reload file and throw away any changes
 nnoremap <leader>rel :edit!<cr>
 
+nmap <leader>rc :!tmux send-keys -t 1 C-p C-j <CR><CR>
+
 map <leader>nt :tabnext<cr>
 
 " Open current split as a new tab
@@ -152,9 +157,6 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 " Do not show that stupid window
 map q: :q
 map + *
-
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = '0'
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
@@ -222,6 +224,4 @@ nnoremap <leader>gc :Gcommit<CR>
 
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
 endif

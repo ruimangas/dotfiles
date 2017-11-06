@@ -13,6 +13,7 @@ alias gk='git checkout'
 alias gkl='git checkout -'
 alias gbnew='git checkout -b'
 alias gst='git stash'
+alias gkm='git checkout master'
 
 # vagrant
 alias svv='vagrant ssh'
