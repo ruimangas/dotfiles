@@ -75,7 +75,7 @@ hi SpellBad cterm=underline ctermfg=yellow
 
 autocmd FileType markdown setlocal spell
 
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :GFiles<cr>
 
 nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
