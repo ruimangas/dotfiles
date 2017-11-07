@@ -76,6 +76,7 @@ hi SpellBad cterm=underline ctermfg=yellow
 autocmd FileType markdown setlocal spell
 
 nnoremap <c-p> :GFiles<cr>
+nnoremap <leader>fl :Lines<cr>
 
 nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
@@ -106,15 +107,10 @@ nnoremap <leader>ro :vsp config/routes.rb<cr>
 nnoremap <leader>mo :vsp app/models<cr>
 
 " Search all files
-" by default it searches only on ruby files
-nnoremap <leader>faf :!ag --ruby<space>
+nnoremap <leader>faf :Ag <space>
 
 " Search all files word under the cursor
-" by default it searches only on ruby files
-nnoremap <leader>fw :!ag --ruby <C-r><C-w>
-
-" Search for 'def foo'
-nnoremap <silent> ,fd :!ag 'def <cword>'<CR>
+nnoremap <leader>fw :Ag <C-r><C-w><cr>
 
 " Open project explorer
 nnoremap <leader>ef :Vexplore<CR>
