@@ -75,8 +75,10 @@ hi SpellBad cterm=underline ctermfg=yellow
 
 autocmd FileType markdown setlocal spell
 
+" vim fzf commands
 nnoremap <c-p> :GFiles<cr>
 nnoremap <leader>fl :Lines<cr>
+nnoremap <leader>gs :GFiles?<CR>
 
 nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
@@ -213,7 +215,6 @@ endfunction
 nmap <leader>cf :call OpenChangedFiles()<CR>
 
 "git commands
-nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gc :Gcommit<CR>
