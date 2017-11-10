@@ -10,6 +10,7 @@ Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vinegar'
@@ -64,21 +65,31 @@ map <leader>p <CR>ibinding.pry<CR><ESC>
 " remove all pry breakpoints
 map <leader>rp :g/binding/d<CR><ESC>
 
-" insert py breakpoint
-map <leader>P <CR>iimport pdb; pdb.set_trace()<CR><ESC>
-
-" remove all py breakpoints
-map <leader>rP :g/set_trace/d<CR><ESC>
-
 setlocal spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=yellow
 
 autocmd FileType markdown setlocal spell
 
-" vim fzf commands
+" Search path
 nnoremap <c-p> :GFiles<cr>
-nnoremap <leader>fl :Lines<cr>
+
+" Search lines all files
+nnoremap <leader>fal :Lines<cr>
+
+" Search lines all buffers
+nnoremap <leader>fbi :BLines<cr>
+
+" Git status
 nnoremap <leader>gs :GFiles?<CR>
+
+" Opens vim buffer
+nnoremap <leader>b :Buffer<CR>
+
+" Search all files
+nnoremap <leader>faf :Ag <space>
+
+" Search all files word under the cursor
+nnoremap <leader>fw :Ag <C-r><C-w><cr>
 
 nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
@@ -89,8 +100,6 @@ nnoremap <silent> <leader>T :TestNearest<CR>
 nnoremap <silent> <leader>t :TestFile<CR>
 nnoremap <silent> <leader>v :TestVisit<CR>
 nnoremap <silent> <leader>las :TestLast<CR>
-
-let test#python#runner = 'pytest'
 
 " Clear search highlights
 nnoremap <leader><space> : :nohlsearch<cr>
@@ -107,12 +116,6 @@ nnoremap <leader>sc :sp db/schema.rb<cr>
 nnoremap <leader>co :vsp app/controllers<cr>
 nnoremap <leader>ro :vsp config/routes.rb<cr>
 nnoremap <leader>mo :vsp app/models<cr>
-
-" Search all files
-nnoremap <leader>faf :Ag <space>
-
-" Search all files word under the cursor
-nnoremap <leader>fw :Ag <C-r><C-w><cr>
 
 " Open project explorer
 nnoremap <leader>ef :Vexplore<CR>
@@ -131,11 +134,6 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>rel :edit!<cr>
 
 nmap <leader>rc :!tmux send-keys -t 1 C-p C-j <CR><CR>
-
-map <leader>nt :tabnext<cr>
-
-" Open current split as a new tab
-map <leader>sp <C-W>T<cr>
 
 " Sometimes I forgot my leader commands
 map <leader>lea :!grep --color leader ~/dotfiles/vimrc <cr>
@@ -170,24 +168,6 @@ set wildignore+=.hg,.git,.svn                     " Version control stuff
 set wildignore+=go/pkg                            " Go static files
 set wildignore+=go/bin                            " Go bin files
 
-" Merge a tab into a split in the previous window (thanks Ben Orenstein)
-function! MergeTabs()
-  if tabpagenr() == 1
-    return
-  endif
-  let bufferName = bufname("%")
-  if tabpagenr("$") == tabpagenr()
-    close!
-  else
-    close!
-    tabprev
-  endif
-  split
-  execute "buffer " . bufferName
-endfunction
-
-nmap <leader>mm :call MergeTabs()<CR>
-
 " Rename current file (thanks Gary Bernhardt)
 function! RenameFile()
   let old_name = expand('%')
@@ -200,25 +180,3 @@ function! RenameFile()
 endfunction
 
 map <leader>ren :call RenameFile()<cr>
-
-" Open changed files (thanks Gary Bernhardt)
-function! OpenChangedFiles()
-  only " Close all windows, unless they're modified
-  let status = system('git status -s | grep "^ \?\(M\|A\|UU\)" | sed "s/^.\{3\}//"')
-  let filenames = split(status, "\n")
-  exec "edit " . filenames[0]
-  for filename in filenames[1:]
-    exec "vsp " . filename
-  endfor
-endfunction
-
-nmap <leader>cf :call OpenChangedFiles()<CR>
-
-"git commands
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gc :Gcommit<CR>
-
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-endif
