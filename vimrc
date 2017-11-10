@@ -180,3 +180,7 @@ function! RenameFile()
 endfunction
 
 map <leader>ren :call RenameFile()<cr>
+
+"git commands
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gb :Gblame<CR>
