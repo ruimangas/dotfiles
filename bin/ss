@@ -11,12 +11,14 @@ if [ "$?" -eq 1 ] ; then
   tmux new-session -d -s $PROJECT_NAME
 
   tmux send-keys 'vim .' 'C-m'
+  tmux split-window -v
   tmux rename-window vim
 
   tmux new-window
   tmux split-window -h
 
   tmux select-window -t 1
+  tmux resize-pane -Z
 
   tmux attach -t $PROJECT_NAME
 fi
