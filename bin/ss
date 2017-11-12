@@ -18,7 +18,7 @@ if [ "$?" -eq 1 ] ; then
   tmux split-window -h
 
   tmux select-window -t 1
-  tmux resize-pane -Z
+  tmux resize-pane -Z -t 0
 
   tmux attach -t $PROJECT_NAME
 fi
