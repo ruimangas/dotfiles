@@ -1,18 +1,24 @@
 #!/bin/bash
 
-CURRENT_SESSION=${PWD##*/}
+PROJECT_NAME=${PWD##*/}
 
-tmux new-session -d -s $CURRENT_SESSION
+tmux has-session -t $PROJECT_NAME 2>/dev/null
 
-tmux send-keys 'vim .' 'C-m'
-tmux rename-window vim
+if [ "$?" -eq 1 ] ; then
+  echo "No Session found. Creating and configuring."
+  sleep 1
 
-tmux new-window
-tmux rename-window rspec
+  tmux new-session -d -s $PROJECT_NAME
 
-tmux new-window
-tmux rename-window server
+  tmux send-keys 'vim .' 'C-m'
+  tmux rename-window vim
 
-tmux select-window -t 1
+  tmux new-window
+  tmux split-window -h
 
-tmux attach -t $CURRENT_SESSION
+  tmux select-window -t 1
+
+  tmux attach -t $PROJECT_NAME
+fi
+
+tmux attach-session -t $PROJECT_NAME

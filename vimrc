@@ -4,13 +4,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
-
+Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
-Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vinegar'
@@ -54,20 +53,15 @@ colorscheme gruvbox
 
 imap jk <ESC>
 
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-
 " insert pry breakpoint
 map <leader>p <CR>ibinding.pry<CR><ESC>
 
 " remove all pry breakpoints
 map <leader>rp :g/binding/d<CR><ESC>
 
+" spell errors
 setlocal spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=yellow
-
 autocmd FileType markdown setlocal spell
 
 " Search path
@@ -91,11 +85,12 @@ nnoremap <leader>faf :Ag <space>
 " Search all files word under the cursor
 nnoremap <leader>fw :Ag <C-r><C-w><cr>
 
+" saving and quit
 nnoremap <leader>w  :w<cr>
 nnoremap <leader>q  :wq<cr>
 nnoremap <leader>fq :q!<cr>
 
-" Running tests
+" Running specs
 nnoremap <silent> <leader>T :TestNearest<CR>
 nnoremap <silent> <leader>t :TestFile<CR>
 nnoremap <silent> <leader>v :TestVisit<CR>
@@ -133,18 +128,21 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Reload file and throw away any changes
 nnoremap <leader>rel :edit!<cr>
 
-nmap <leader>rc :!tmux send-keys -t 1 C-p C-j <CR><CR>
-
 " Sometimes I forgot my leader commands
 map <leader>lea :!grep --color leader ~/dotfiles/vimrc <cr>
 
+" Custom mappings
 nnoremap <C-f> /
 nnoremap <C-h> B
 nnoremap <C-l> W
-
 nnoremap Y y$
 nnoremap \\ $
 nnoremap qq  _
+
+" Center display after searching
+nnoremap + *zz
+nnoremap n   nzz
+nnoremap N   Nzz
 
 " long lines
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -152,13 +150,8 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Do not show that stupid window
 map q: :q
-map + *
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
-autocmd Filetype java setlocal ts=4 sw=4 sts=0 expandtab
-autocmd Filetype go setlocal ts=4 sw=4 sts=0 expandtab
-autocmd Filetype py setlocal ts=4 sw=4 sts=0 expandtab
-au BufRead,BufNewFile *.go set filetype=go
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class
 set wildignore+=*.DS_Store                        " OSX bullshit
@@ -168,7 +161,10 @@ set wildignore+=.hg,.git,.svn                     " Version control stuff
 set wildignore+=go/pkg                            " Go static files
 set wildignore+=go/bin                            " Go bin files
 
-" Rename current file (thanks Gary Bernhardt)
+" Runs current spec in bottom pane
+nnoremap <c-r> :!tmux send-keys -t 1 'clear; echo "Running %"; bundle exec rspec ' % c-m <cr><cr>
+
+" Rename current file
 function! RenameFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'), 'file')
