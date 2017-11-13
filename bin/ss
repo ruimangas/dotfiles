@@ -17,6 +17,11 @@ if [ "$?" -eq 1 ] ; then
   tmux new-window
   tmux split-window -h
 
+  if [ "$PROJECT_NAME" = "open_layer" ]; then
+    tmux select-window -t 2
+    tmux send-keys -t 1 'bundle exec rails s' c-m
+  fi
+
   tmux select-window -t 1
   tmux resize-pane -Z -t 0
 
