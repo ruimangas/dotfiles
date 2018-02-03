@@ -54,7 +54,8 @@ colorscheme gruvbox
 imap jk <ESC>
 
 " insert pry breakpoint
-map <leader>p <CR>ibinding.pry<CR><ESC>
+map <leader>p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
+map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
 
 " remove all pry breakpoints
 map <leader>rp :g/binding/d<CR><ESC>
@@ -65,7 +66,7 @@ hi SpellBad cterm=underline ctermfg=yellow
 autocmd FileType markdown setlocal spell
 
 " Search path
-nnoremap <c-p> :GFiles<cr>
+nnoremap <c-p> :Files<cr>
 
 " Search lines all files
 nnoremap <leader>fal :Lines<cr>
@@ -149,7 +150,7 @@ noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Do not show that stupid window
-map q: :q
+" map q: :q
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
@@ -160,9 +161,6 @@ set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg    " Images
 set wildignore+=.hg,.git,.svn                     " Version control stuff
 set wildignore+=go/pkg                            " Go static files
 set wildignore+=go/bin                            " Go bin files
-
-" Runs current spec in bottom pane
-nnoremap <c-r> :!tmux send-keys -t 1 'clear; echo "Running %"; bundle exec rspec ' % c-m <cr><cr>
 
 " Rename current file
 function! RenameFile()
