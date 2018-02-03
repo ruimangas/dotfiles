@@ -53,7 +53,7 @@ colorscheme gruvbox
 
 imap jk <ESC>
 
-" insert pry breakpoint
+" insert breakpoints
 map <leader>p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
 map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
 
