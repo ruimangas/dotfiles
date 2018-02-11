@@ -66,16 +66,13 @@ hi SpellBad cterm=underline ctermfg=yellow
 autocmd FileType markdown setlocal spell
 
 " Search path
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :GFiles<cr>
 
 " Search lines all files
 nnoremap <leader>fal :Lines<cr>
 
 " Search lines all buffers
 nnoremap <leader>fbi :BLines<cr>
-
-" Git status
-nnoremap <leader>gs :GFiles?<CR>
 
 " Opens vim buffer
 nnoremap <leader>b :Buffer<CR>
@@ -178,3 +175,5 @@ map <leader>ren :call RenameFile()<cr>
 "git commands
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
