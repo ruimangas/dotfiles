@@ -59,6 +59,7 @@ map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
 
 " remove all pry breakpoints
 map <leader>rp :g/binding/d<CR><ESC>
+map <leader>r[ :g/ipdb/d<CR><ESC>
 
 " spell errors
 setlocal spell spelllang=en_us
