@@ -95,6 +95,9 @@ nnoremap <silent> <leader>t :TestFile<CR>
 nnoremap <silent> <leader>v :TestVisit<CR>
 nnoremap <silent> <leader>las :TestLast<CR>
 
+" Alternative buffer with backspace
+nnoremap <bs> <c-^>
+
 " Clear search highlights
 nnoremap <leader><space> : :nohlsearch<cr>
 
