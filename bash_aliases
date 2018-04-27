@@ -6,7 +6,6 @@ alias gpl='git pull'
 alias gcm='git commit'
 alias gd='git diff'
 alias gdm='git diff master'
-alias gdd='git diff develop'
 alias gc='git clone'
 alias gb='git branch'
 alias gk='git checkout'
@@ -15,8 +14,6 @@ alias gbnew='git checkout -b'
 alias gst='git stash'
 alias gkm='git checkout master'
 
-# vagrant
-alias svv='vagrant ssh'
 
 #docker
 alias dpp="docker ps"
@@ -26,6 +23,9 @@ alias dss="docker stop"
 
 alias hs='history | grep'
 alias hi='history'
+
+alias gclis='gcloud compute instances list | grep'
+alias gcli='gcloud compute instances list'
 
 # current projs
 alias pi='cd ~/pipelines; ls'
@@ -43,4 +43,3 @@ alias dk='~/Desktop; ls'
 alias dot='~/dotfiles'
 alias drop='~/dropbox; ls'
 
-alias worknotes='vim ~/dropbox/work/notes'
