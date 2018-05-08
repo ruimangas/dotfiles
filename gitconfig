@@ -18,5 +18,6 @@
 
 [github]
   user = ruimangas
+
 [core]
   editor = /usr/bin/vim
