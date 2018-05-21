@@ -108,12 +108,6 @@ nnoremap <leader>sv :source ~/.vimrc<CR>
 " Search and replace on current file
 nnoremap <leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 
-" Rails helpers
-nnoremap <leader>sc :sp db/schema.rb<cr>
-nnoremap <leader>co :vsp app/controllers<cr>
-nnoremap <leader>ro :vsp config/routes.rb<cr>
-nnoremap <leader>mo :vsp app/models<cr>
-
 " Open project explorer
 nnoremap <leader>ef :Vexplore<CR>
 
@@ -151,7 +145,7 @@ noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Do not show that stupid window
-" map q: :q
+map q: :q
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
