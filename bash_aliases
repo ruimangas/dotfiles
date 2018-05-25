@@ -14,6 +14,8 @@ alias gbnew='git checkout -b'
 alias gst='git stash'
 alias gkm='git checkout master'
 
+# big query
+alias bql='bq ls --max_results=10000'
 
 #docker
 alias dpp="docker ps"
@@ -21,9 +23,11 @@ alias dll="docker logs"
 alias drr="docker rm -f"
 alias dss="docker stop"
 
+# history
 alias hs='history | grep'
 alias hi='history'
 
+# gcloud
 alias gclis='gcloud compute instances list | grep'
 alias gcli='gcloud compute instances list'
 
@@ -39,6 +43,7 @@ alias tn="tmux"
 alias tl="tmux ls"
 alias tk="tmux kill-session -t"
 
+# misc
 alias dk='~/Desktop; ls'
 alias dot='~/dotfiles'
 alias drop='~/dropbox; ls'
