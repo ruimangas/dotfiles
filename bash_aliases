@@ -1,5 +1,6 @@
 # git
 alias gss='git status'
+alias gs='gss'
 alias gad='git add .'
 alias gp='git push'
 alias gpl='git pull'

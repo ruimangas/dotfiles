@@ -14,6 +14,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
+Bundle 'nvie/vim-flake8'
 
 call vundle#end()
 filetype plugin indent on
@@ -22,13 +23,11 @@ syntax on
 
 set showmode
 set relativenumber
-set ruler
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set incsearch
 set smartcase
-set ignorecase
 set hlsearch
 set visualbell
 set nobackup
@@ -60,6 +59,9 @@ map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
 " remove all pry breakpoints
 map <leader>rp :g/binding/d<CR><ESC>
 map <leader>r[ :g/ipdb/d<CR><ESC>
+
+" run flake
+noremap <leader>rk :call Flake8()<CR>
 
 " spell errors
 setlocal spell spelllang=en_us
