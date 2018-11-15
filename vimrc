@@ -30,6 +30,7 @@ set incsearch
 set smartcase
 set hlsearch
 set visualbell
+set ruler
 set nobackup
 set nowritebackup
 set backspace=indent,eol,start
@@ -45,6 +46,7 @@ set splitbelow
 set notimeout
 set ttimeout
 set ttimeoutlen=10
+set so=7
 
 let mapleader=','
 set background=dark
@@ -112,10 +114,13 @@ nnoremap <leader>ss :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " Open project explorer
 nnoremap <leader>ef :Vexplore<CR>
+nnoremap <leader>eg :Sexplore<CR>
 
 " Open file on current dir
 cnoremap <expr> %% expand('%:h').'/'
+
 map <leader>ed :vsp %%
+map <leader>eh :sp %%
 
 " format an entire file
 nnoremap <leader>fef ggVG=

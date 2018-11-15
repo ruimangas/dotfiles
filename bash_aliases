@@ -15,8 +15,9 @@ alias gbnew='git checkout -b'
 alias gst='git stash'
 alias gkm='git checkout master'
 
-# big query
-alias bql='bq ls --max_results=10000'
+alias ivm='vim .'
+alias vmi='vim .'
+alias vi='vim .'
 
 #docker
 alias dpp="docker ps"
@@ -48,4 +49,3 @@ alias tk="tmux kill-session -t"
 alias dk='~/Desktop; ls'
 alias dot='~/dotfiles'
 alias drop='~/dropbox; ls'
-
