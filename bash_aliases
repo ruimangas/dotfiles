@@ -28,6 +28,7 @@ alias wkp='watch "kubectl get pods"'
 alias wkn='watch "kubectl get nodes"'
 alias wkj='watch "kubectl get jobs"'
 alias wkrp='watch "kubectl get pods --field-selector=status.phase=Running"'
+alias kgc='gcloud container clusters get-credentials '
 
 # history
 alias hs='history | grep'
