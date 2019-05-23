@@ -27,6 +27,7 @@ alias kj='kubectl get jobs'
 alias wkp='watch "kubectl get pods"'
 alias wkn='watch "kubectl get nodes"'
 alias wkj='watch "kubectl get jobs"'
+alias wkrp='watch "kubectl get pods --field-selector=status.phase=Running"'
 
 # history
 alias hs='history | grep'
