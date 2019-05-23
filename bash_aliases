@@ -19,12 +19,6 @@ alias ivm='vim .'
 alias vmi='vim .'
 alias vi='vim .'
 
-#docker
-alias dpp="docker ps"
-alias dll="docker logs"
-alias drr="docker rm -f"
-alias dss="docker stop"
-
 # history
 alias hs='history | grep'
 alias hi='history'
