@@ -15,9 +15,18 @@ alias gbnew='git checkout -b'
 alias gst='git stash'
 alias gkm='git checkout master'
 
+# vim
 alias ivm='vim .'
 alias vmi='vim .'
 alias vi='vim .'
+
+# kubernetes
+alias kp='kubectl get pods'
+alias kn='kubectl get nodes'
+alias kj='kubectl get jobs'
+alias wkp='watch "kubectl get pods"'
+alias wkn='watch "kubectl get nodes"'
+alias wkj='watch "kubectl get jobs"'
 
 # history
 alias hs='history | grep'
