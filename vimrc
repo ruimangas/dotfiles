@@ -8,6 +8,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
+Bundle 'morhetz/gruvbox'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
 Bundle 'tpope/vim-endwise'
