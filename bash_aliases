@@ -21,12 +21,12 @@ alias vmi='vim .'
 alias vi='vim .'
 
 # kubernetes
-alias kp='kubectl get pods'
-alias kn='kubectl get nodes'
-alias kj='kubectl get jobs'
-alias wkp='watch "kubectl get pods"'
-alias wkn='watch "kubectl get nodes"'
-alias wkj='watch "kubectl get jobs"'
+alias kgp='kubectl get pods'
+alias kgn='kubectl get nodes'
+alias kgj='kubectl get jobs'
+alias wkgp='watch "kubectl get pods"'
+alias wkgn='watch "kubectl get nodes"'
+alias wkgj='watch "kubectl get jobs"'
 alias wkrp='watch "kubectl get pods --field-selector=status.phase=Running"'
 alias kgc='gcloud container clusters get-credentials '
 
