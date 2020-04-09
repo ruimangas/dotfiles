@@ -12,7 +12,6 @@ Bundle 'morhetz/gruvbox'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'nvie/vim-flake8'
@@ -55,8 +54,6 @@ colorscheme gruvbox
 
 imap jk <ESC>
 
-" insert breakpoints
-map <leader>p <CR>irequire 'pry-byebug'; binding.pry<CR><ESC>
 map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
 
 " remove all pry breakpoints
