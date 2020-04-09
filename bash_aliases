@@ -34,16 +34,6 @@ alias kgc='gcloud container clusters get-credentials '
 alias hs='history | grep'
 alias hi='history'
 
-# gcloud
-alias gclis='gcloud compute instances list | grep'
-alias gcli='gcloud compute instances list'
-
-# current projs
-alias pi='cd ~/pipelines; ls'
-alias ol='cd ~/Desktop/open_layer; ls'
-alias pr='cd ~/Desktop/python_bigquery_runner; ls'
-alias sd='cd ~/Desktop/scrappy-doo; ls'
-
 # tmux
 alias ta="tmux a -t"
 alias tn="tmux"
