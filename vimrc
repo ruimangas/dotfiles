@@ -8,7 +8,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
-Bundle 'morhetz/gruvbox'
+Bundle 'sonph/onehalf', {'rtp': 'vim/'}
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
 Bundle 'tpope/vim-endwise'
@@ -50,7 +50,7 @@ set so=7
 
 let mapleader=','
 set background=dark
-colorscheme gruvbox
+colorscheme onehalfdark
 
 imap jk <ESC>
 
