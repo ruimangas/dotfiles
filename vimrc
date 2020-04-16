@@ -5,15 +5,16 @@ call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-vinegar'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
 Bundle 'sonph/onehalf', {'rtp': 'vim/'}
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-vinegar'
-Bundle 'tpope/vim-fugitive'
 Bundle 'nvie/vim-flake8'
 
 call vundle#end()
