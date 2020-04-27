@@ -6,7 +6,8 @@ call vundle#begin()
 Bundle 'gmarik/Vundle.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-salve'
+Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tomtom/tcomment_vim'
@@ -15,7 +16,6 @@ Bundle 'ervandew/supertab'
 Bundle 'sonph/onehalf', {'rtp': 'vim/'}
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Bundle 'junegunn/fzf.vim'
-Bundle 'nvie/vim-flake8'
 
 call vundle#end()
 filetype plugin indent on
@@ -29,6 +29,7 @@ set shiftwidth=2
 set expandtab
 set incsearch
 set smartcase
+set ma
 set hlsearch
 set visualbell
 set ruler
@@ -74,6 +75,8 @@ nnoremap <c-p> :GFiles<cr>
 
 " Search lines all files
 nnoremap <leader>fal :Lines<cr>
+
+nnoremap <leader>co :Console<cr>
 
 " Search lines all buffers
 nnoremap <leader>fbi :BLines<cr>
