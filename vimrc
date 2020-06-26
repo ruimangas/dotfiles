@@ -62,9 +62,6 @@ map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
 map <leader>rp :g/binding/d<CR><ESC>
 map <leader>r[ :g/ipdb/d<CR><ESC>
 
-" run flake
-noremap <leader>rk :call Flake8()<CR>
-
 " spell errors
 setlocal spell spelllang=en_us
 hi SpellBad cterm=underline ctermfg=yellow
