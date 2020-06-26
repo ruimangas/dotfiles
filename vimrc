@@ -160,8 +160,6 @@ set wildignore+=*.DS_Store                        " OSX bullshit
 set wildignore+=*.pyc                             " Python byte code
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg    " Images
 set wildignore+=.hg,.git,.svn                     " Version control stuff
-set wildignore+=go/pkg                            " Go static files
-set wildignore+=go/bin                            " Go bin files
 
 " Rename current file
 function! RenameFile()
