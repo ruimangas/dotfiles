@@ -5,6 +5,7 @@ call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'Olical/conjure', {'tag': 'v4.1.0'}
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-salve'
 Bundle 'tpope/vim-dispatch'
@@ -51,6 +52,7 @@ set ttimeoutlen=10
 set so=7
 
 let mapleader=','
+let maplocalleader = ","
 set background=dark
 colorscheme onehalfdark
 
