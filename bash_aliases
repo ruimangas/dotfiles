@@ -15,10 +15,10 @@ alias gbnew='git checkout -b'
 alias gst='git stash'
 alias gkm='git checkout master'
 
-# vim
-alias ivm='vim .'
-alias vmi='vim .'
-alias vi='vim .'
+# nvim
+alias ivm='nvim'
+alias vmi='nvim'
+alias vi='nvim'
 
 # kubernetes
 alias kgp='kubectl get pods'
