@@ -52,7 +52,7 @@ set ttimeoutlen=10
 set so=7
 
 let mapleader=','
-let maplocalleader = ","
+let maplocalleader = "/"
 set background=dark
 colorscheme onehalfdark
 
