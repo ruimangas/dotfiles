@@ -74,12 +74,9 @@ nnoremap <c-p> :GFiles<cr>
 " Search lines all files
 nnoremap <leader>fal :Lines<cr>
 
-nnoremap <leader>co :Console<cr>
-
 " Search lines all buffers
 nnoremap <leader>fbi :BLines<cr>
 
-" Opens vim buffer
 nnoremap <leader>b :Buffer<CR>
 
 " Search all files
