@@ -6,7 +6,6 @@ call vundle#begin()
 Bundle 'gmarik/Vundle.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'Olical/conjure', {'tag': 'v4.1.0'}
-Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-salve'
 Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-vinegar'
