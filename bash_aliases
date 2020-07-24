@@ -20,15 +20,6 @@ alias ivm='nvim'
 alias vmi='nvim'
 alias vi='nvim'
 
-# kubernetes
-alias kgp='kubectl get pods'
-alias kgn='kubectl get nodes'
-alias kgj='kubectl get jobs'
-alias wkgp='watch "kubectl get pods"'
-alias wkgn='watch "kubectl get nodes"'
-alias wkgj='watch "kubectl get jobs"'
-alias wkrp='watch "kubectl get pods --field-selector=status.phase=Running"'
-
 # history
 alias hs='history | grep'
 alias hi='history'
@@ -42,4 +33,3 @@ alias tk="tmux kill-session -t"
 # misc
 alias dk='~/Desktop; ls'
 alias dot='~/dotfiles'
-alias drop='~/dropbox; ls'
