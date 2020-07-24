@@ -5,11 +5,9 @@ call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'Olical/conjure', {'tag': 'v4.1.0'}
-Bundle 'tpope/vim-salve'
-Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
+Bundle 'Olical/conjure', {'tag': 'v4.1.0'}
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
