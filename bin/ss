@@ -2,6 +2,8 @@
 
 PROJECT_NAME=${PWD##*/}
 
+CLOJURE_PROJECT_FILE="project.clj"
+
 tmux has-session -t $PROJECT_NAME 2>/dev/null
 
 if [ "$?" -eq 1 ] ; then
@@ -13,12 +15,14 @@ if [ "$?" -eq 1 ] ; then
   tmux send-keys 'nvim' 'C-m'
 
   tmux new-window
+
   tmux split-window -h
 
-  tmux select-window -t 2
+  if [ -f $CLOJURE_PROJECT_FILE ]; then
+    tmux send-keys -t 1 'lein repl' c-m
+  fi
 
   tmux select-window -t 1
-  tmux resize-pane -Z -t 0
 
   tmux attach -t $PROJECT_NAME
 fi
