@@ -7,6 +7,7 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
+Bundle 'dense-analysis/ale'
 Bundle 'Olical/conjure', {'tag': 'v4.1.0'}
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
@@ -169,6 +170,8 @@ function! RenameFile()
 endfunction
 
 map <leader>ren :call RenameFile()<cr>
+
+let g:ale_linters = {'clojure': ['clj-kondo']}
 
 "git commands
 nnoremap <leader>gd :Gdiff<CR>
