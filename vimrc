@@ -59,8 +59,8 @@ imap jk <ESC>
 map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
 map <leader>p F<space><space>i#nu/tapd<space><esc>
 
-" remove all pry breakpoints
-map <leader>rp :g/binding/d<CR><ESC>
+" remove all nu taps
+map <leader>rp :%s/#nu\/tapd<space>//g<CR><ESC>
 map <leader>r[ :g/ipdb/d<CR><ESC>
 
 " spell errors
