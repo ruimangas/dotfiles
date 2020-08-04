@@ -57,6 +57,7 @@ colorscheme onehalfdark
 imap jk <ESC>
 
 map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
+map <leader>p F<space><space>i#nu/tapd<space><esc>
 
 " remove all pry breakpoints
 map <leader>rp :g/binding/d<CR><ESC>
@@ -170,6 +171,15 @@ function! RenameFile()
 endfunction
 
 map <leader>ren :call RenameFile()<cr>
+
+function! SearchClojureWord()
+  exe "set iskeyword-=/"
+  let var = expand("<cword>")
+  exe "set iskeyword+=/"
+  return "".var.""
+endfunction
+
+nnoremap <leader>fec :exec 'Ag' SearchClojureWord()<CR>
 
 let g:ale_linters = {'clojure': ['clj-kondo']}
 
