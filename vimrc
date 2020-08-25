@@ -13,7 +13,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
 Bundle 'sonph/onehalf', {'rtp': 'vim/'}
-Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Bundle 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Bundle 'junegunn/fzf.vim'
 
 call vundle#end()
@@ -186,5 +186,8 @@ let g:ale_linters = {'clojure': ['clj-kondo']}
 "git commands
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gc :Commits<CR>
+
+" History
+nnoremap <leader>hi :History<CR>
+nnoremap <leader>hs :History/<CR>
