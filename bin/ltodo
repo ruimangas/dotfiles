@@ -1,3 +1,3 @@
-# list thing I have to do
+# list things I have to do
 
 ls ~/Desktop/ | grep "TODO_"
