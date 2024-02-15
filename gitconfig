@@ -20,4 +20,6 @@
   user = ruimangas
 
 [core]
-  editor = /usr/local/bin/nvim
+	editor = nvim
+[includeIf "gitdir:/Users/rui.pereira/dev/nu/"]
+	path = /Users/rui.pereira/.nugitconfig

@@ -5,10 +5,12 @@ call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
 Bundle 'tpope/vim-surround'
+Bundle 'github/copilot.vim'
 Bundle 'tpope/vim-vinegar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'dense-analysis/ale'
-Bundle 'Olical/conjure', {'tag': 'v4.1.0'}
+Bundle 'm00qek/baleia.nvim', { 'tag': 'v1.3.0'}
+Bundle 'Olical/conjure', {'tag': 'v4.23.0'}
 Bundle 'tomtom/tcomment_vim'
 Bundle 'janko-m/vim-test'
 Bundle 'ervandew/supertab'
@@ -27,6 +29,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set incsearch
+set mouse=
 set smartcase
 set ma
 set hlsearch
@@ -55,6 +58,9 @@ set background=dark
 colorscheme onehalfdark
 
 imap jk <ESC>
+
+let s:baleia = luaeval("require('baleia').setup { }")
+autocmd BufWinEnter my-buffer call s:baleia.automatically(bufnr('%'))
 
 map <leader>[ <CR>iimport ipdb; ipdb.set_trace()<CR><ESC>
 map <leader>p F<space><space>i#nu/tapd<space><esc>
@@ -181,6 +187,8 @@ endfunction
 
 nnoremap <leader>fec :exec 'Ag' SearchClojureWord()<CR>
 
+let g:sexp_enable_insert_mode_mappings = 0
+
 let g:ale_linters = {'clojure': ['clj-kondo']}
 
 "git commands
@@ -191,3 +199,9 @@ nnoremap <leader>gc :Commits<CR>
 " History
 nnoremap <leader>hi :History<CR>
 nnoremap <leader>hs :History/<CR>
+
+let g:copilot_filetypes = {
+    \ 'gitcommit': v:true,
+    \ 'markdown': v:true,
+    \ 'clojure': v:true,
+    \ }
