@@ -1,11 +1,13 @@
 # dotfiles
 
-My vim and zsh config files
+My vim, zsh, and git config.
 
-## Installation
+## Install on a new machine
 
-1. `git clone https://github.com/ruimangas/dotfiles`
-2. `cd dotfiles`
-3. `ruby install.rb`
-4. `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-5. Run :PluginInstall inside vim.
+```sh
+git clone https://github.com/ruimangas/dotfiles ~/dotfiles
+~/dotfiles/install.sh
+```
+
+`install.sh` symlinks the configs into `$HOME`, clones Vundle, and runs
+`:PluginInstall`. Existing files are backed up as `<name>.bak.<timestamp>`.

@@ -1,6 +1,0 @@
-# Creates something for me to do.
-
-TODO_PREFIX="TODO_"
-TODO_SUFFIX="$*"
-
-touch ~/Desktop/"$TODO_PREFIX$TODO_SUFFIX"

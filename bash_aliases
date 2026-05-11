@@ -25,12 +25,36 @@ alias vi='nvim'
 alias hs='history | grep'
 alias hi='history'
 
-# tmux
-alias ta="tmux a -t"
-alias tn="tmux"
-alias tl="tmux ls"
-alias tk="tmux kill-session -t"
-
 # misc
-alias dk='~/Desktop; ls'
-alias dot='~/dotfiles'
+alias dk='cd ~/Desktop && ls'
+alias dot='cd ~/dotfiles'
+
+# auto-jq/bat: pipe through jq for json, bat for yaml
+_auto_jq_wrap() {
+  local cmd="$1"; shift
+  local -a args=("$@")
+  local wants_json=false wants_yaml=false
+
+  for (( i=1; i<=${#args[@]}; i++ )); do
+    case "${args[$((i-1))]}" in
+      -o=json|--output=json) wants_json=true; break ;;
+      -o=yaml|--output=yaml) wants_yaml=true; break ;;
+      -o|--output)
+        [[ "${args[$i]:-}" == json ]] && wants_json=true
+        [[ "${args[$i]:-}" == yaml ]] && wants_yaml=true
+        break ;;
+    esac
+  done
+
+  if $wants_json; then
+    command "$cmd" "${args[@]}" | jq
+  elif $wants_yaml; then
+    command "$cmd" "${args[@]}" | bat -l yaml --paging=always --pager="less -R"
+  else
+    command "$cmd" "${args[@]}"
+  fi
+}
+
+kubectl() { _auto_jq_wrap kubectl "$@"; }
+aws()     { _auto_jq_wrap aws     "$@"; }
+docker()  { _auto_jq_wrap docker  "$@"; }

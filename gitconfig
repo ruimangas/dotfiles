@@ -1,14 +1,16 @@
 [user]
   name = Rui Mangas Pereira
   email = ruijosemangas@gmail.com
+	signingkey = B085E3F243F00EFC
 
 [commit]
   template = ~/.gitmessage
+	gpgsign = true
 
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+	diff = auto
+	status = auto
+	branch = auto
 
 [color "diff"]
   meta = yellow
@@ -21,5 +23,17 @@
 
 [core]
 	editor = nvim
-[includeIf "gitdir:/Users/rui.pereira/dev/nu/"]
-	path = /Users/rui.pereira/.nugitconfig
+
+[include]
+	path = ~/.gitconfig.local
+[init]
+	defaultBranch = main
+[gpg]
+	format = openpgp
+	program = gpg
+[credential]
+	helper = !gh auth git-credential
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[http]
+	postBuffer = 524288000

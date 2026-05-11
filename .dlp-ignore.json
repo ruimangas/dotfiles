@@ -1,0 +1,12 @@
+[
+    {
+        "path": "gitconfig",
+        "policy": "EmailPolicy",
+        "justification": "git@github.com is a git remote URL format, not an email address"
+    },
+    {
+        "path": ".dlp-ignore.json",
+        "policy": "EmailPolicy",
+        "justification": "exemption file contains URL pattern in justification text, not an email"
+    }
+]
