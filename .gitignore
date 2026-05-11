@@ -1,4 +1,5 @@
 .netrwhist
 /vim
 .DS_Store
+.dlp-ignore.json
 
